@@ -895,7 +895,7 @@
             <h1>Assine as atualizações</h1>
 
             <p>
-              Receba as últimas notícias criativas do SmartMag sobre arte e design.
+              Receba as últimas notícias e mais atualizas do Pungo Andongo.
             </p>
 
             <div class="inputContainer">
