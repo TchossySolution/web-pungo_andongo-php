@@ -286,7 +286,7 @@
   text-transform: uppercase;
 }
 
-/* EMPHASIS */
+/* LAST NOTICE EMPHASIS */
 .lastNotices .lastNoticesAllContainer .otherNotices .noticeInEmphasis {
 }
 
@@ -521,7 +521,7 @@
   position: absolute;
   bottom: 3.4rem;
   left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #f3f3f3;
   font-weight: 700;
   z-index: 2;
@@ -534,6 +534,7 @@
 
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
 .emphasesNotice .emphases .noticeContent .noticeInfo p {
   font-size: 0.9rem;
@@ -543,14 +544,14 @@
 
 /* NOTICE EMPHASES right */
 
-.emphasesNotice .otherEmphases {
+.emphasesNotice .emphasesNoticeAllContainer .otherEmphases {
   flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.emphasesNotice .otherEmphases .notice {
+.emphasesNotice .emphasesNoticeAllContainer .otherEmphases .notice {
   width: 100%;
   max-width: 17rem;
 
@@ -558,67 +559,96 @@
   flex-direction: column;
   gap: 1rem;
 }
-.emphasesNotice .otherEmphases .notice .imageContainer {
+.emphasesNotice
+  .emphasesNoticeAllContainer
+  .otherEmphases
+  .notice
+  .imageContainer {
   position: relative;
   width: 100%;
   height: 20rem;
   max-height: 12.6rem;
 }
-.emphasesNotice .otherEmphases .notice .imageContainer img {
+.emphasesNotice
+  .emphasesNoticeAllContainer
+  .otherEmphases
+  .notice
+  .imageContainer
+  img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.emphasesNotice .otherEmphases .notice .noticeContent {
+.emphasesNotice
+  .emphasesNoticeAllContainer
+  .otherEmphases
+  .notice
+  .noticeContent {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.emphasesNotice .otherEmphases .notice .noticeContent h1 {
+.emphasesNotice
+  .emphasesNoticeAllContainer
+  .otherEmphases
+  .notice
+  .noticeContent
+  h1 {
   font-size: 0.8rem;
   color: #f3f3f3;
   font-weight: 700;
 }
 
-.emphasesNotice .otherEmphases .notice .noticeContent .noticeInfo {
+.emphasesNotice
+  .emphasesNoticeAllContainer
+  .otherEmphases
+  .notice
+  .noticeContent
+  .noticeInfo {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-.emphasesNotice .otherEmphases .notice .noticeContent .noticeInfo p {
+.emphasesNotice
+  .emphasesNoticeAllContainer
+  .otherEmphases
+  .notice
+  .noticeContent
+  .noticeInfo
+  p {
   font-size: 0.7rem;
   color: #f3f3f3;
 }
 
-/* MOST NOTICES */
-.mostNotices {
+/* more NOTICES */
+.moreNotices {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mostNotices .mostNoticesAllContainer {
+.moreNotices .moreNoticesAllContainer {
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
 }
 
-/* MOST NOTICES */
-.mostNotices .mostNoticesAllContainer .mostNoticesContainer {
+/* more NOTICES */
+.moreNotices .moreNoticesAllContainer .moreNoticesContainer {
   flex: 2;
 }
-.mostNotices .mostNoticesAllContainer .mostNoticesContainer .contentMostNotice {
+.moreNotices .moreNoticesAllContainer .moreNoticesContainer .contentMoreNotice {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   margin-top: 2rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice {
   width: 100%;
   max-width: 26rem;
@@ -628,10 +658,10 @@
   flex-direction: column;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .imageContainer {
   position: relative;
@@ -640,10 +670,10 @@
   min-width: 14rem;
   max-height: 14rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .imageContainer
   img {
@@ -653,20 +683,20 @@
   object-fit: cover;
 }
 
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .noticeContent {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .noticeContent
   h1 {
@@ -675,20 +705,20 @@
   font-weight: 800;
   text-transform: uppercase;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .noticeContent
   p {
   font-size: 0.98rem;
   color: #535353;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .noticeContent
   .noticeInfo {
@@ -696,10 +726,10 @@
   flex-direction: row;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   > .notice
   .noticeContent
   .noticeInfo
@@ -709,25 +739,25 @@
 }
 
 /* PUBLICITY */
-.mostNotices .mostNoticesAllContainer .mostNoticesContainer .publicityLittle {
+.moreNotices .moreNoticesAllContainer .moreNoticesContainer .publicityLittle {
   width: 100%;
   margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
   .publicityLittle
   .containerImage {
   width: 100%;
   height: 7rem;
   position: relative;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
   .publicityLittle
   .containerImage
   img {
@@ -739,10 +769,10 @@
 
 /* RESUME */
 
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume {
   flex: 1;
 
@@ -752,10 +782,10 @@
   flex-direction: column;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume
   .notice {
   width: 100%;
@@ -766,10 +796,10 @@
   flex-direction: row;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume
   .notice
   .imageContainer {
@@ -779,10 +809,10 @@
   max-width: 7rem;
   max-height: 4.6rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume
   .notice
   .imageContainer
@@ -793,10 +823,10 @@
   object-fit: cover;
 }
 
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume
   .notice
   .noticeContent {
@@ -804,10 +834,10 @@
   flex-direction: column;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume
   .notice
   .noticeContent
@@ -817,10 +847,10 @@
   font-weight: 700;
 }
 
-.mostNotices
-  .mostNoticesAllContainer
-  .mostNoticesContainer
-  .contentMostNotice
+.moreNotices
+  .moreNoticesAllContainer
+  .moreNoticesContainer
+  .contentMoreNotice
   .noticeResume
   .notice
   .noticeContent
@@ -831,19 +861,19 @@
 }
 
 /* OTHER NOTICES */
-.mostNotices .mostNoticesAllContainer .otherNotices {
+.moreNotices .moreNoticesAllContainer .otherNotices {
   flex: 1;
   min-width: 20rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .categoryTItleSectionContainer {
   background-color: #121212;
   padding: 0.5rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .categoryTItleSectionContainer
   h1 {
@@ -853,11 +883,11 @@
   text-transform: uppercase;
 }
 
-/* EMPHASIS */
-.mostNotices .mostNoticesAllContainer .otherNotices .noticeInEmphasis {
+/* moreNotices EMPHASIS */
+.moreNotices .moreNoticesAllContainer .otherNotices .noticeInEmphasis {
 }
 
-.mostNotices .mostNoticesAllContainer .otherNotices .noticeInEmphasis .notice {
+.moreNotices .moreNoticesAllContainer .otherNotices .noticeInEmphasis .notice {
   width: 100%;
   min-height: 14rem;
   margin-top: 1rem;
@@ -867,8 +897,8 @@
   flex-direction: column;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -880,8 +910,8 @@
   max-height: 18rem;
   min-height: 10rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -893,8 +923,8 @@
   object-fit: cover;
 }
 
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -904,8 +934,8 @@
   align-items: center;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -914,8 +944,8 @@
   font-size: 2.6rem;
   color: #535353;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -925,8 +955,8 @@
   flex-direction: column;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -938,8 +968,8 @@
   font-weight: 800;
   text-transform: uppercase;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -949,8 +979,8 @@
   font-size: 0.98rem;
   color: #535353;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -961,8 +991,8 @@
   flex-direction: row;
   gap: 1rem;
 }
-.mostNotices
-  .mostNoticesAllContainer
+.moreNotices
+  .moreNoticesAllContainer
   .otherNotices
   .noticeInEmphasis
   .notice
@@ -972,4 +1002,427 @@
   p {
   font-size: 0.9rem;
   color: #535353;
+}
+
+/* LAST NOTICES */
+.noticesRelevant {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noticesRelevant .noticesRelevantAllContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+}
+
+/* RELEVANT NOTICES */
+.noticesRelevant .noticesRelevantAllContainer .noticesRelevantContainer {
+  flex: 2;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .allNotices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice {
+  width: 100%;
+  max-width: 27.8rem;
+  min-height: 14rem;
+  margin-top: 1rem;
+  padding: 1.4rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  /* border-bottom: 0.1rem solid #c6c6c6; */
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  min-width: 12rem;
+  max-height: 18rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .imageContainer
+  img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .noticeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .noticeContent
+  h1 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .noticeContent
+  p {
+  font-size: 0.98rem;
+  color: #535353;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .noticeContent
+  .noticeInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .noticesRelevantContainer
+  .notice
+  .noticeContent
+  .noticeInfo
+  p {
+  font-size: 0.9rem;
+  color: #535353;
+}
+
+/* OTHER NOTICES */
+.noticesRelevant .noticesRelevantAllContainer .otherNotices {
+  flex: 1;
+  min-width: 20rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .categoryTItleSectionContainer {
+  background-color: #121212;
+  padding: 0.5rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .categoryTItleSectionContainer
+  h1 {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* EMPHASIS */
+.noticesRelevant .noticesRelevantAllContainer .otherNotices .noticeInEmphasis {
+}
+
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice {
+  width: 100%;
+  min-height: 14rem;
+  margin-top: 1rem;
+  padding: 1.4rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  min-width: 12rem;
+  max-height: 18rem;
+  min-height: 12rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .imageContainer
+  img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent
+  h1 {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent
+  p {
+  font-size: 0.98rem;
+  color: #535353;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent
+  .noticeInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent
+  .noticeInfo
+  p {
+  font-size: 0.9rem;
+  color: #535353;
+}
+
+/* RESUME */
+.emphasesNotice .otherEmphases {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.emphasesNotice .otherEmphases .notice {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* noticesRelevant noticeResume */
+.noticesRelevant .noticesRelevantAllContainer .otherNotices .noticeResume {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeResume
+  .notice {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeResume
+  .notice
+  .imageContainer {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  max-width: 7rem;
+  max-height: 4.6rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeResume
+  .notice
+  .imageContainer
+  img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeResume
+  .notice
+  .noticeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeResume
+  .notice
+  .noticeContent
+  h1 {
+  font-size: 0.9rem;
+  color: #494949;
+  font-weight: 700;
+}
+
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .noticeResume
+  .notice
+  .noticeContent
+  .noticeInfo
+  p {
+  font-size: 0.9rem;
+  color: #535353;
+}
+
+/* SUBSCRIBE */
+.noticesRelevant .noticesRelevantAllContainer .otherNotices .subscribe {
+  margin: 2rem 0;
+  padding: 2rem;
+  max-width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  border: 0.1rem solid #cbcbcb;
+}
+.noticesRelevant .noticesRelevantAllContainer .otherNotices .subscribe h1 {
+  font-size: 1.6rem;
+  color: #010101;
+  font-weight: 700;
+}
+.noticesRelevant .noticesRelevantAllContainer .otherNotices .subscribe > p {
+  font-size: 0.97rem;
+  color: #717171;
+  text-align: center;
+  line-height: 160%;
+}
+
+/* inputContainer */
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .subscribe
+  .inputContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .subscribe
+  .inputContainer
+  input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.97rem;
+  text-align: center;
+
+  border: 0.1rem solid #c6c6c6;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .subscribe
+  .inputContainer
+  button {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--main-color);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.97rem;
+  text-transform: uppercase;
+}
+
+/* checkContainer */
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .subscribe
+  .checkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.noticesRelevant
+  .noticesRelevantAllContainer
+  .otherNotices
+  .subscribe
+  .checkContainer
+  > p {
+  font-size: 0.9rem;
+  color: #717171;
+  text-align: center;
+  line-height: 160%;
 }

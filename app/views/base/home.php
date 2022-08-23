@@ -422,16 +422,16 @@
     </div>
   </section>
 
-  <section class="mostNotices">
+  <section class="moreNotices">
     <div class="container">
-      <div class="mostNoticesAllContainer">
+      <div class="moreNoticesAllContainer">
 
-        <div class="mostNoticesContainer">
+        <div class="moreNoticesContainer">
           <div class="titleSectionContainer">
             <h1>Mais <span>Noticias</span> </h1>
           </div>
 
-          <div class="contentMostNotice">
+          <div class="contentMoreNotice">
             <div class="notice">
               <div class="imageContainer">
                 <img
@@ -533,7 +533,7 @@
           </div>
 
 
-          <div class="contentMostNotice">
+          <div class="contentMoreNotice">
             <div class="notice">
               <div class="imageContainer">
                 <img
@@ -701,7 +701,6 @@
           </div>
         </div>
 
-
       </div>
     </div>
   </section>
@@ -713,13 +712,212 @@
       </div>
     </div>
   </section>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
+  <section class="noticesRelevant">
+    <div class="container">
+      <div class="noticesRelevantAllContainer">
+
+        <div class="noticesRelevantContainer">
+          <div class="titleSectionContainer">
+            <h1>Noticias <span>Relevantes</span> </h1>
+          </div>
+
+          <div class="allNotices">
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/Depositphotos_138978856_xl-2015-1024x684.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                </div>
+
+                <p>Para entender o novo smartwatch e outros dispositivos profissionais de foco recente, devemos olhar
+                  para
+                  o Vale do Silício e o…</p>
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/Depositphotos_138978856_xl-2015-1024x684.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                </div>
+
+                <p>Para entender o novo smartwatch e outros dispositivos profissionais de foco recente, devemos olhar
+                  para
+                  o Vale do Silício e o…</p>
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/Depositphotos_138978856_xl-2015-1024x684.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                </div>
+
+                <p>Para entender o novo smartwatch e outros dispositivos profissionais de foco recente, devemos olhar
+                  para
+                  o Vale do Silício e o…</p>
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/Depositphotos_138978856_xl-2015-1024x684.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                </div>
+
+                <p>Para entender o novo smartwatch e outros dispositivos profissionais de foco recente, devemos olhar
+                  para
+                  o Vale do Silício e o…</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="otherNotices">
+          <div class="categoryTItleSectionContainer">
+            <h1>Convivendo com o Covid</h1>
+          </div>
+
+          <div class="noticeInEmphasis">
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                </div>
+
+                <p>Para entender o novo smartwatch e outros dispositivos profissionais de foco recente, devemos olhar
+                  para
+                  o Vale do Silício e o…</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="noticeResume">
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>14 de Janeiro de 2022</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>14 de Janeiro de 2022</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                <div class="noticeInfo">
+                  <p>14 de Janeiro de 2022</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="subscribe">
+            <h1>Assine as atualizações</h1>
+
+            <p>
+              Receba as últimas notícias criativas do SmartMag sobre arte e design.
+            </p>
+
+            <div class="inputContainer">
+              <input type="text" placeholder="Seu endereço de email">
+              <button>Se inscrever</button>
+            </div>
+
+            <div class="checkContainer">
+              <p>
+                <input type="checkbox" name="" id="">
+                Ao se inscrever, você concorda com nossos termos e nosso acordo de <a href="http://" target="_blank"
+                  rel="noopener noreferrer">
+                  Política de Privacidade .
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </main>
 
 <script type="text/javascript" src="<?= urlProject(FOLDER_BASE . BASE_JS . "/homeScripts.js") ?>">
