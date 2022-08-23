@@ -1,6 +1,6 @@
 <?php $this->layout('_theme') ?>
 
-<link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/homeStyle.css")?>">
+<link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/homeStyles.css")?>">
 
 <main class="homeContainer">
   <!-- swiper section starts  -->
@@ -504,20 +504,40 @@
 
                 </div>
               </div>
+
+              <div class="notice">
+                <div class="imageContainer">
+                  <img
+                    src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                    alt="">
+                </div>
+
+                <div class="noticeContent">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>14 de Janeiro de 2022</p>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="otherNotices">
-          <div class="categoryTItleSectionContainer">
-            <h1>Convivendo com o Covid</h1>
+          <div class="publicityLittle">
+            <div class='containerImage'>
+              <img
+                src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/728X90-banner-02.jpg?>"
+                alt="">
+            </div>
           </div>
 
-          <div class="noticeInEmphasis">
+
+          <div class="contentMostNotice">
             <div class="notice">
               <div class="imageContainer">
                 <img
-                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/Depositphotos_138978856_xl-2015-1024x684.jpg"
                   alt="">
               </div>
 
@@ -534,19 +554,165 @@
                   o Vale do Silício e o…</p>
               </div>
             </div>
+
+            <div class="noticeResume">
+              <div class="notice">
+                <div class="imageContainer">
+                  <img
+                    src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                    alt="">
+                </div>
+
+                <div class="noticeContent">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>14 de Janeiro de 2022</p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="notice">
+                <div class="imageContainer">
+                  <img
+                    src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                    alt="">
+                </div>
+
+                <div class="noticeContent">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>14 de Janeiro de 2022</p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="notice">
+                <div class="imageContainer">
+                  <img
+                    src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                    alt="">
+                </div>
+
+                <div class="noticeContent">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>14 de Janeiro de 2022</p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="notice">
+                <div class="imageContainer">
+                  <img
+                    src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                    alt="">
+                </div>
+
+                <div class="noticeContent">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>14 de Janeiro de 2022</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="otherNotices">
+          <div class="categoryTItleSectionContainer">
+            <h1>Viagem</h1>
           </div>
 
-          <!-- 
-          <div class="categoryTItleSectionContainer">
-            <h1>Nós somos sociais</h1>
-          </div> -->
+          <div class="noticeInEmphasis">
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/shutterstock_229597000-1024x683.jpg"
+                  alt="">
+              </div>
 
+              <div class="noticeContent">
+                <strong> 1 </strong>
+
+                <div class="noticeContent_left">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-nilay-ramoliya-3964833-1-1024x683.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <strong> 2 </strong>
+
+                <div class="noticeContent_left">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="notice">
+              <div class="imageContainer">
+                <img
+                  src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/pexels-marcus-aurelius-4063532-1-1024x1536.jpg"
+                  alt="">
+              </div>
+
+              <div class="noticeContent">
+                <strong> 3 </strong>
+
+                <div class="noticeContent_left">
+                  <h1>Linha de produtos Bose na feira: showroom aberto agora em Dubai</h1>
+
+                  <div class="noticeInfo">
+                    <p>Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span></p>
+                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+
 
       </div>
     </div>
   </section>
 
+  <section class="publicity">
+    <div class="container">
+      <div class='containerImage'>
+        <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/pub1.webp")?>" alt="">
+      </div>
+    </div>
+  </section>
   <br>
   <br>
   <br>

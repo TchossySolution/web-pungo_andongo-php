@@ -152,7 +152,7 @@
 }
 .publicity .containerImage {
   width: 100%;
-  height: 12rem;
+  height: 14rem;
   position: relative;
 }
 .publicity .containerImage img {
@@ -708,6 +708,35 @@
   color: #535353;
 }
 
+/* PUBLICITY */
+.mostNotices .mostNoticesAllContainer .mostNoticesContainer .publicityLittle {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mostNotices
+  .mostNoticesAllContainer
+  .mostNoticesContainer
+  .publicityLittle
+  .containerImage {
+  width: 100%;
+  height: 7rem;
+  position: relative;
+}
+.mostNotices
+  .mostNoticesAllContainer
+  .mostNoticesContainer
+  .publicityLittle
+  .containerImage
+  img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* RESUME */
 
 .mostNotices
@@ -846,10 +875,10 @@
   .imageContainer {
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   min-width: 12rem;
   max-height: 18rem;
-  min-height: 12rem;
+  min-height: 10rem;
 }
 .mostNotices
   .mostNoticesAllContainer
@@ -871,6 +900,28 @@
   .notice
   .noticeContent {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.mostNotices
+  .mostNoticesAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent
+  > strong {
+  font-size: 2.6rem;
+  color: #535353;
+}
+.mostNotices
+  .mostNoticesAllContainer
+  .otherNotices
+  .noticeInEmphasis
+  .notice
+  .noticeContent
+  .noticeContent_left {
+  display: flex;
   flex-direction: column;
   gap: 1rem;
 }
@@ -880,6 +931,7 @@
   .noticeInEmphasis
   .notice
   .noticeContent
+  .noticeContent_left
   h1 {
   font-size: 1.2rem;
   color: #000000;
@@ -892,6 +944,7 @@
   .noticeInEmphasis
   .notice
   .noticeContent
+  .noticeContent_left
   p {
   font-size: 0.98rem;
   color: #535353;
@@ -902,6 +955,7 @@
   .noticeInEmphasis
   .notice
   .noticeContent
+  .noticeContent_left
   .noticeInfo {
   display: flex;
   flex-direction: row;
@@ -913,6 +967,7 @@
   .noticeInEmphasis
   .notice
   .noticeContent
+  .noticeContent_left
   .noticeInfo
   p {
   font-size: 0.9rem;
