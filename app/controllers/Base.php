@@ -31,10 +31,14 @@ class Base {
     echo $this->templates->render($page_name, []);
   }
   public function details():void{
-    $page_name = "page";
+    $page_name = "detailsNews";
     echo $this->templates->render($page_name, []);
   }
   public function category():void{
+    $page_name = "page";
+    echo $this->templates->render($page_name, []);
+  }
+  public function user():void{
     $page_name = "page";
     echo $this->templates->render($page_name, []);
   }

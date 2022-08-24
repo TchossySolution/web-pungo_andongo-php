@@ -17,7 +17,9 @@
       </div>
 
       <div class="logoHeaderContainer">
-        <h1> <?= SITE ?></h1>
+        <a href="<?=urlProject()?>">
+          <h1> <?= SITE ?></h1>
+        </a>
       </div>
 
       <div class="loginContainer">
@@ -42,6 +44,9 @@
             <a href="">Casa</a>
           </li>
           <li>
+            <a href="">Sobre</a>
+          </li>
+          <li>
             <a href="">Política</a>
           </li>
           <li>
@@ -55,6 +60,9 @@
           </li>
           <li>
             <a href="">Tecnologia</a>
+          </li>
+          <li>
+            <a href="">Contacto</a>
           </li>
         </ul>
       </nav>

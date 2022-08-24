@@ -18,11 +18,10 @@ function router(){
   
 // ROTA DE NEWS
   $router -> group("/news");
-  $router -> get("/", "Base:news");
   $router -> get("/{page}", "Base:news");
   $router -> get("/detailsNews/{news_id}", "Base:details");
-  $router -> get("/categories/{category_id}", "Base:category");
-  
+  $router -> get("/search/category/{category_name}/{page}", "Base:category");
+  $router -> get("/search/author/{author_name}/{page}", "Base:author");
   
 // ROTA DA DASHBOARD
   $router -> group("/dashboard");
