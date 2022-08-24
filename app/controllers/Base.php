@@ -27,18 +27,22 @@ class Base {
 
   // NEWS
   public function news():void{
-    $page_name = "page";
+    $page_name = "news";
     echo $this->templates->render($page_name, []);
   }
   public function details():void{
     $page_name = "detailsNews";
     echo $this->templates->render($page_name, []);
   }
+  public function search():void{
+    $page_name = "page";
+    echo $this->templates->render($page_name, []);
+  }
   public function category():void{
     $page_name = "page";
     echo $this->templates->render($page_name, []);
   }
-  public function user():void{
+  public function author():void{
     $page_name = "page";
     echo $this->templates->render($page_name, []);
   }
