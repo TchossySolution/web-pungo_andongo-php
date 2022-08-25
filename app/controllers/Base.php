@@ -49,7 +49,7 @@ class Base {
 
   // CONTACTS
   public function contacts():void{
-    $page_name = "page";
+    $page_name = "contacts";
     echo $this->templates->render($page_name, []);
   }
 

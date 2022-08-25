@@ -41,7 +41,7 @@
       <nav class="navContainer">
         <ul>
           <li>
-            <a href="">Casa</a>
+            <a href="<?=urlProject()?>">Casa</a>
           </li>
           <li>
             <a href="">Sobre</a>
