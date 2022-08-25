@@ -1,6 +1,6 @@
  <?php $this->layout('_theme') ?>
 
- <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/detailsNewsStyles.css")?>">
+ <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/detailsNewsStyle.css")?>">
 
  <main class="detailsNewsContainer">
    <div class="container">
@@ -28,7 +28,7 @@
 
          <div class="infoNews">
            <div class="imageContainer">
-             <img src="" alt="">
+             <img src="<?=URL_BASE . FOLDER_BASE . BASE_IMG . "/rafael.jpg"?>" alt="">
            </div>
            <p>
              Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span> - <span> Atualizado: 14 de
@@ -40,31 +40,28 @@
            </div>
 
            <div>
-             <i class="fa-regular fa-comment-dots"></i> <span>2</span> minutos de leitura
+             <i class="fa-regular fa-clock"></i> <span>2</span> minutos de leitura
            </div>
 
          </div>
 
          <div class="shareContainer">
            <div class="shareIn facebook">
-             <i class="fa-regular fa-comment-dots"></i>
+             <i class="fa-brands fa-facebook-f"></i>
              <span>Facebook</span>
            </div>
            <div class="shareIn instagram">
-             <i class="fa-regular fa-comment-dots"></i>
+             <i class="fa-brands fa-instagram"></i>
              <span>Instagram</span>
            </div>
            <div class="shareIn twitter">
-             <i class="fa-regular fa-comment-dots"></i>
+             <i class="fa-brands fa-twitter"></i>
              <span>Twitter</span>
-           </div>
-           <div class="shareIn">
-             <i class="fa-regular fa-comment-dots"></i>
            </div>
          </div>
 
          <div class="imageNewsContainer">
-           <img src="" alt="">
+           <img src="https://www.aljazeera.com/wp-content/uploads/2022/02/000_323T4MF.jpg?resize=1920%2C1080" alt="">
          </div>
 
          <div class="imageDescription">
@@ -89,7 +86,7 @@
          </div>
 
          <div class="epigraph">
-           <i class="fa-regular fa-comment-dots"></i>
+           <i class="fa-solid fa-quote-left"></i>
 
            <p>
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto distinctio ad commodi provident

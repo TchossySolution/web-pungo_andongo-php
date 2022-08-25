@@ -1,6 +1,6 @@
 <?php $this->layout('_theme') ?>
 
-<link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/authorStyles.css")?>">
+<link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/authorStyle.css")?>">
 
 <main class="authorContainer">
   <div class="container">
@@ -28,14 +28,16 @@
   </div>
 
   <div class="authorInfoContainer">
+    <img src="<?=URL_BASE . FOLDER_BASE . BASE_IMG . "/author_bg.jpg"?>" alt="">
+    <div class="shadow"></div>
     <div class="container">
       <div class="authorContainerLeft">
         <div class="imageContainer">
-          <img src="" alt="">
+          <img src="<?=URL_BASE . FOLDER_BASE . BASE_IMG . "/odnumiar.jpg"?>" alt="">
         </div>
 
         <div class="infoAuthor">
-          <h1>Rafael Odnumiar</h1>
+          <h1>Rafael Odnumiar </h1>
           <h3>Autor Senior</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque repellendus, ut vero ducimus unde rem
@@ -91,7 +93,7 @@
               </p>
 
               <div class="noticeInfo">
-                <p>Por <strong>Rafael Pilartes</strong> - <span><i class="fa-regular fa-comment-dots"></i> 14 de
+                <p>Por <strong>Rafael Pilartes</strong> - <span><i class="fa-solid fa-calendar-days"></i> 14 de
                     Janeiro de 2022</span></p>
                 <p><i class="fa-regular fa-comment-dots"></i> 3</p>
               </div>
@@ -99,7 +101,7 @@
               <div>
                 <button class="readMore">
                   Leia mais sobre a noticia
-                  <i class="fa-regular fa-comment-dots"></i>
+                  <i class="fa-solid fa-right-long"></i>
                 </button>
               </div>
             </div>

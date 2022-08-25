@@ -1,8 +1,8 @@
  <?php $this->layout('_theme') ?>
 
- <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/searchStyles.css")?>">
+ <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/searchStyled.css")?>">
 
- <main class="detailsNewsContainer">
+ <main class="searchContainer">
    <div class="container">
 
      <div class="indicateContainer">
@@ -53,7 +53,7 @@
                </p>
 
                <div class="noticeInfo">
-                 <p>Por <strong>Rafael Pilartes</strong> - <span><i class="fa-regular fa-comment-dots"></i> 14 de
+                 <p>Por <strong>Rafael Pilartes</strong> - <span><i class="fa-solid fa-calendar-days"></i></i> 14 de
                      Janeiro de 2022</span></p>
                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
                </div>
@@ -61,7 +61,7 @@
                <div>
                  <button class="readMore">
                    Leia mais sobre a noticia
-                   <i class="fa-regular fa-comment-dots"></i>
+                   <i class="fa-solid fa-right-long"></i>
                  </button>
                </div>
              </div>
