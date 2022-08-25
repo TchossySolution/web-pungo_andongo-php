@@ -35,15 +35,15 @@ class Base {
     echo $this->templates->render($page_name, []);
   }
   public function search():void{
-    $page_name = "page";
+    $page_name = "search";
     echo $this->templates->render($page_name, []);
   }
   public function category():void{
-    $page_name = "page";
+    $page_name = "category";
     echo $this->templates->render($page_name, []);
   }
   public function author():void{
-    $page_name = "page";
+    $page_name = "author";
     echo $this->templates->render($page_name, []);
   }
 

@@ -20,7 +20,7 @@ function router(){
   $router -> group("/news");
   $router -> get("/{page}", "Base:news");
   $router -> get("/detailsNews/{news_id}", "Base:details");
-  $router -> get("/search/{search}/{page}", "Base:search");
+  $router -> get("/search/for/{search}/{page}", "Base:search");
   $router -> get("/search/category/{category_name}/{page}", "Base:category");
   $router -> get("/search/author/{author_name}/{page}", "Base:author");
   
