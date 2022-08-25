@@ -47,17 +47,14 @@
 
       <div class="authorContainerRight">
         <button class="buttonSocialMedia">
-          facebook
           <i class="fa-brands fa-facebook-f"></i>
         </button>
 
         <button class="buttonSocialMedia">
-          instagram
           <i class="fa-brands fa-instagram"></i>
         </button>
 
         <button class="buttonSocialMedia">
-          twitter
           <i class="fa-brands fa-twitter"></i>
         </button>
       </div>
