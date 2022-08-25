@@ -27,6 +27,12 @@ function router(){
 // ROTA DA DASHBOARD
   $router -> group("/dashboard");
   $router -> get("/", "Dash:home");
+  $router -> get("/users", "Dash:users");
+  $router -> get("/news", "Dash:news");
+  $router -> get("/categories", "Dash:categories");
+  $router -> get("/authors", "Dash:authors");
+  $router -> get("/messages", "Dash:messages");
+  $router -> get("/newsLetters", "Dash:newsLetters");
  
     
 // ROTA DE ERROS
