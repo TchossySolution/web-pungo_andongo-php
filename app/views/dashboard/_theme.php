@@ -7,19 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- STYLES -->
-  <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . "/src/public/styles/globalStyles.css")?>">
+  <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . "/src/public/styles/globalStyled.css")?>">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Swiper Js -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
   <title> <?= SITE ?> </title>
 </head>
 
 <body>
-  <h1>Header</h1>
+  <?php 
+    if($this->section('removeHeader')):
+      echo $this->section('removeHeader');
+    else:
+      require 'src/components/Header/index.php'; 
+    endif;
+  ?>
 
   <main>
     <?=$this->section('content')?>
   </main>
 
-  <h1>Footer</h1>
 </body>
 
 </html>

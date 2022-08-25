@@ -1,16 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+  <link rel="stylesheet" href="<?=urlProject(FOLDER_DASHBOARD . "/src/components/Header/styles.css")?>">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <header id="header">
+    <div class="headerPrimary">
+      <div>
+      </div>
 
-<body>
-  <h1>Header</h1>
+      <div class="logoHeaderContainer">
+        <a href="<?=urlProject()?>">
+          <h1> <?= SITE ?> Dashboard</h1>
+        </a>
+      </div>
 
-</body>
+      <div>
+      </div>
+    </div>
 
-</html>
+    <div class="headerSecondary">
+      <div class="dateContainer">
+        <p> Terça-feira, 23 de Janeiro de 2022</p>
+      </div>
+
+      <nav class="navContainer">
+        <ul>
+          <li>
+            <a href="<?=urlDashProject()?>">Geral</a>
+          </li>
+          <li>
+            <a href="<?=urlDashProject("news")?>">Noticias</a>
+          </li>
+          <li>
+            <a href="<?=urlDashProject("categories")?>">Categorias</a>
+          </li>
+          <li>
+            <a href="<?=urlDashProject("authors")?>">Autores</a>
+          </li>
+          <li>
+            <a href="<?=urlDashProject("messages")?>">Mensagens</a>
+          </li>
+          <li>
+            <a href="<?=urlDashProject("newsLetters")?>">Newsletter</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="searchAndDarkContainer">
+        <button>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+  </header>
