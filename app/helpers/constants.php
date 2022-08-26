@@ -3,6 +3,8 @@
 define('URL_BASE', "http://localhost/web-pungo-andongo-php");
 define('SITE', "Pungo Andongo");
 
+define('CONTROLLERS', 'app/controllers');
+
 define('FOLDER_BASE', "/app/views/base");
 define('BASE_VIEWS', "/../views/base");
 define('BASE_STYLES', "/src/styles");
@@ -16,15 +18,17 @@ define('DASHBOARD_JS', "/src/js");
 define('DASHBOARD_IMG', "/src/assets/images");
 
 
-function urlProject(string $uri = null): string{
-  if($uri){
+function urlProject(string $uri = null): string
+{
+  if ($uri) {
     return URL_BASE . "/{$uri}";
   }
 
   return URL_BASE;
 }
-function urlDashProject(string $uri = null): string{
-  if($uri){
+function urlDashProject(string $uri = null): string
+{
+  if ($uri) {
     return URL_BASE . "/dashboard/{$uri}";
   }
 
