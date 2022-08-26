@@ -42,7 +42,7 @@
 
 
     <div>
-      <button name="add_news">
+      <button name="create_news">
         Criar Noticia
       </button>
     </div>

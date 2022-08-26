@@ -17,7 +17,7 @@
     </div>
 
     <div>
-      <button name="add_authors">
+      <button name="create_author">
         Criar Autor
       </button>
     </div>

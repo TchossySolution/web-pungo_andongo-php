@@ -2,7 +2,7 @@
 
 include_once('../db/config.php');
 
-if (isset($_POST['add_category'])) {
+if (isset($_POST['create_category'])) {
 
   echo 'add_category';
 
@@ -15,4 +15,10 @@ if (isset($_POST['add_category'])) {
   if ($sql->execute(array($name_category, $date_create, $date_update))) {
     header('Location: http://localhost/web-pungo-andongo-php/dashboard/categories');
   };
+};
+
+if (isset($_POST['delete_category'])) {
+};
+
+if (isset($_POST['update_category'])) {
 };

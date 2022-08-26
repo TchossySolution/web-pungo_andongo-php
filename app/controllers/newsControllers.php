@@ -74,3 +74,9 @@ if (isset($_POST['add_news'])) {
     header('Location: http://localhost/web-pungo-andongo-php/dashboard/news');
   };
 };
+
+if (isset($_POST['delete_news'])) {
+};
+
+if (isset($_POST['update_news'])) {
+};

@@ -2,7 +2,7 @@
 
 include_once('../db/config.php');
 
-if (isset($_POST['add_authors'])) {
+if (isset($_POST['create_author'])) {
 
   echo 'add_authors';
 
@@ -19,4 +19,10 @@ if (isset($_POST['add_authors'])) {
   } else {
     header('Location: http://localhost/web-pungo-andongo-php/dashboard/');
   };
+};
+
+if (isset($_POST['delete_author'])) {
+};
+
+if (isset($_POST['update_author'])) {
 };

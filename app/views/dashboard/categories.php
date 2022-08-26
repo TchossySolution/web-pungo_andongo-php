@@ -12,7 +12,7 @@
     </div>
 
     <div>
-      <button name="add_category">
+      <button name="create_category">
         Criar categoria
       </button>
     </div>
