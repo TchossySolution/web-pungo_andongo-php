@@ -1,11 +1,11 @@
  <?php $this->layout('_theme') ?>
 
- <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/contactStyle.css")?>">
+ <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/contactStyle.css") ?>">
 
  <main class="contactContainer">
    <section class="publicity">
      <div class='containerImage'>
-       <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/author_bg.jpg")?>" alt="">
+       <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/author_bg.jpg") ?>" alt="">
      </div>
      <div class="indicateContainer">
        <div class="container">
@@ -97,11 +97,13 @@
          </form>
 
        </div>
-
      </div>
 
      <div class="mapContainer">
-       <i></i>
+       <iframe width="100%"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.443369164935!2d13.160102915016976!3d-8.931226894206198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a518ab803e6f651%3A0x35dbfe8d1ba75473!2sBelas!5e0!3m2!1spt-BR!2sao!4v1661502589170!5m2!1spt-BR!2sao"
+         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+         referrerpolicy="no-referrer-when-downgrade"></iframe>
      </div>
    </div>
  </main>
