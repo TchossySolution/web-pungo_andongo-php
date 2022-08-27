@@ -10,6 +10,10 @@ if (isset($_POST['create_news'])) {
   $accept  = array("jpg", "png", "jpeg");
   $extension  = pathinfo($_FILES['image_news']['name'], PATHINFO_EXTENSION);
 
+  setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+  date_default_timezone_set('America/Sao_Paulo');
+  $completeDate = strftime('%A, %d de %B de %Y', strtotime('today'));
+
   // $dateNew = date('d-m-Y H:i:s');
   // $dateNewComplete = "../_imageDB/date-$dateNew/";
 
@@ -55,8 +59,8 @@ if (isset($_POST['create_news'])) {
   $choose_editors_news   = $_POST['choose_editors_news'];
   $emphasis_news   = $_POST['emphasis_news'];
   $relevant_news = $_POST['relevant_news'];
-  $date_create = date('d-m-Y');
-  $date_update =  date('d-m-Y');
+  $date_create = $completeDate;
+  $date_update =  $completeDate;
 
   $sql = $pdo->prepare("INSERT INTO news values(null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
