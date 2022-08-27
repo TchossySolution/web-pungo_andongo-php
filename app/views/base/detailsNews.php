@@ -1,6 +1,20 @@
  <?php $this->layout('_theme') ?>
 
- <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/detailsNewsStyle.css")?>">
+ <?php
+  require 'src/db/config.php';
+
+  $id;
+
+  foreach ($newsId as $data) :
+    $id = $data;
+  endforeach;
+
+  $news = $pdo->prepare("SELECT * FROM news where id=$id ");
+  $news->execute();
+
+  ?>
+
+ <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/detailsNewsStyle.css") ?>">
 
  <main class="detailsNewsContainer">
    <div class="container">
@@ -9,30 +23,59 @@
        <span> » </span>
        <a href=""> Categoria </a>
        <span> » </span>
-       <a href=""> Titulo da noticia </a>
+       <a href=""> <?= $id ?> </a>
      </div>
 
+
+
+
+
+
+
+
      <div class="containerAllContent">
+       <?php
+        foreach ($news as $data) :
+
+          $author_id = $data['author_id'];
+          $author_name;
+
+          $get_author = $pdo->prepare("SELECT * FROM author where id=$author_id");
+          $get_author->execute();
+
+          foreach ($get_author as $author) :
+            $author_name = $author['name_author'];
+          endforeach;
+
+          $category_id = $data['category_id'];
+          $category_name;
+
+          $get_category = $pdo->prepare("SELECT * FROM categories where id=$category_id");
+          $get_category->execute();
+
+          foreach ($get_category as $category) :
+            $category_name = $category['name_category'];
+          endforeach;
+        ?>
        <div class="containerLeft">
 
          <div class="categoryNewsContainer">
-           <strong class="categoryNews"> Categoria </strong>
+           <strong class="categoryNews"> <?= $category_name ?> </strong>
          </div>
 
-         <h1>Bose Line of Products on the Show: Showroom Open Now in Dubai</h1>
+         <h1><?= $data['title_news'] ?></h1>
 
          <p>
-           To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley
-           and the
+           <?= $data['resume_news'] ?>
          </p>
 
          <div class="infoNews">
            <div class="imageContainer">
-             <img src="<?=URL_BASE . FOLDER_BASE . BASE_IMG . "/rafael.jpg"?>" alt="">
+             <img src="<?= $data['image_news'] ?>" alt="">
            </div>
            <p>
-             Por <strong>Rafael Pilartes</strong> - <span>14 de Janeiro de 2022</span> - <span> Atualizado: 14 de
-               Janeiro de 2022</span>
+             Por <strong><?= $author_name ?></strong> - <span><?= $data['date_create'] ?></span> - <span> Atualizado:
+               <?= $data['date_update'] ?></span>
            </p>
 
            <div>
@@ -61,27 +104,17 @@
          </div>
 
          <div class="imageNewsContainer">
-           <img src="https://www.aljazeera.com/wp-content/uploads/2022/02/000_323T4MF.jpg?resize=1920%2C1080" alt="">
+           <img src="<?= $data['image_news'] ?>" alt="">
          </div>
 
          <div class="imageDescription">
-           <p><span>Descrição da imagem</span> @ fotografado por: <span>Raimundo Kilede</span></p>
+           <p><span> <?= $data['description_image_news'] ?></span> @ fotografado por: <span>
+               <?= $data['photography_news'] ?></span></p>
          </div>
 
          <div class="newsDescription">
            <p>
-             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa consectetur, quas, dignissimos excepturi
-             tenetur modi unde dicta maiores accusantium illo sint quos aliquam nesciunt atque placeat officia nihil
-             voluptatibus ipsam.
-
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus harum sed doloribus id voluptas
-             asperiores neque nobis aut. Minima quia a ullam consequatur ex cupiditate tempora libero culpa, recusandae
-             cum.
-
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vel dignissimos dolore id mollitia,
-             autem animi recusandae ullam reiciendis nostrum laboriosam alias laborum quod, assumenda nemo deserunt,
-             maxime vero eaque!
-
+             <?= $data['description_news'] ?>
            </p>
          </div>
 
@@ -89,14 +122,14 @@
            <i class="fa-solid fa-quote-left"></i>
 
            <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto distinctio ad commodi provident
-             sunt perferendis, ipsum laboriosam eveniet mollitia quae culpa sequi quibusdam omnis eaque fugit iusto,
-             neque quia?
+             <?= $data['epigraph_news'] ?>
            </p>
 
-           <h4>- Odnumiar Raison</h4>
+           <h4>- <?= $data['author_epigraph_news'] ?>
+           </h4>
          </div>
        </div>
+       <?php endforeach ?>
 
        <div class="rightContainer">
          <div class="otherNotices">

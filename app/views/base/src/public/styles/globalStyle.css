@@ -45,6 +45,10 @@ h1 {
   font-family: 'Public Sans', sans-serif;
 }
 
+a {
+  color: #fffcfc;
+}
+
 .bodyNoScroll {
   overflow-y: hidden;
 }

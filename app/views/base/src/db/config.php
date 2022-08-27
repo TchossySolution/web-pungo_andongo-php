@@ -9,10 +9,10 @@ if ($mode == 'local') {
   $dbName = "pungo_andongo";
 }
 if ($mode == 'producao') {
-  $dbHost = "";
-  $dbUsername = "";
-  $dbPassword = "";
-  $dbName = "pungo_andongo";
+  $dbHost = "localhost";
+  $dbUsername = "jornangr_adm_tchossy";
+  $dbPassword = "adm_tchossy123";
+  $dbName = "jornangr_pungo_andongo";
 }
 
 try {

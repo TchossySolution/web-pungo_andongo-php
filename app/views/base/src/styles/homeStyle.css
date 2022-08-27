@@ -58,11 +58,14 @@
   max-width: 14rem;
   height: 3rem;
   font-size: 1.1rem;
-  color: rgb(252, 252, 252);
+  color: #fcfcfc;
   font-weight: 700;
   background-color: var(--main-color);
 
   cursor: pointer;
+}
+.homeContainer .swiper .slide .slideInfo button a {
+  color: #fff;
 }
 
 .container {
@@ -649,6 +652,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice {
   width: 100%;
   max-width: 26rem;
@@ -662,6 +666,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .imageContainer {
   position: relative;
@@ -674,6 +679,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .imageContainer
   img {
@@ -687,6 +693,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .noticeContent {
   display: flex;
@@ -697,6 +704,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .noticeContent
   h1 {
@@ -709,6 +717,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .noticeContent
   p {
@@ -719,6 +728,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .noticeContent
   .noticeInfo {
@@ -730,6 +740,7 @@
   .moreNoticesAllContainer
   .moreNoticesContainer
   .contentMoreNotice
+  a
   > .notice
   .noticeContent
   .noticeInfo
@@ -940,6 +951,7 @@
   .noticeInEmphasis
   .notice
   .noticeContent
+  a
   > strong {
   font-size: 2.6rem;
   color: #535353;
@@ -1420,6 +1432,7 @@
   .otherNotices
   .subscribe
   .checkContainer
+  a
   > p {
   font-size: 0.9rem;
   color: #717171;

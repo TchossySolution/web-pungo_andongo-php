@@ -11,7 +11,7 @@
   <link href="<?= urlProject(FOLDER_BASE . "/src/assets/icons/JPA_favicon.jpg") ?>" rel="apple-touch-icon" />
 
   <!-- STYLES -->
-  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/public/styles/globalStyled.css") ?>">
+  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/public/styles/globalStyle.css") ?>">
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
