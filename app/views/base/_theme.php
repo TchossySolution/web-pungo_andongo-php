@@ -6,8 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Favicons -->
+  <link href="<?= urlProject(FOLDER_BASE . "/src/assets/icons/JPA_favicon.jpg") ?>" rel="icon" />
+  <link href="<?= urlProject(FOLDER_BASE . "/src/assets/icons/JPA_favicon.jpg") ?>" rel="apple-touch-icon" />
+
   <!-- STYLES -->
-  <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . "/src/public/styles/globalStyled.css")?>">
+  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/public/styles/globalStyled.css") ?>">
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,24 +35,24 @@
 </head>
 
 <body>
-  <?php 
-    if($this->section('removeHeader')):
-      echo $this->section('removeHeader');
-    else:
-      require 'src/components/Header/index.php'; 
-    endif;
+  <?php
+  if ($this->section('removeHeader')) :
+    echo $this->section('removeHeader');
+  else :
+    require 'src/components/Header/index.php';
+  endif;
   ?>
 
   <main>
-    <?=$this->section('content')?>
+    <?= $this->section('content') ?>
   </main>
 
-  <?php 
-    if($this->section('removeFooter')):
-      echo $this->section('removeFooter');
-    else:
-      require 'src/components/Footer/index.php';
-    endif;
+  <?php
+  if ($this->section('removeFooter')) :
+    echo $this->section('removeFooter');
+  else :
+    require 'src/components/Footer/index.php';
+  endif;
   ?>
 
   <script src="https://kit.fontawesome.com/792a6b2573.js" crossorigin="anonymous"></script>

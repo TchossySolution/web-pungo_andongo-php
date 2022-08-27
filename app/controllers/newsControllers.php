@@ -2,7 +2,7 @@
 
 include_once('../db/config.php');
 
-if (isset($_POST['add_news'])) {
+if (isset($_POST['create_news'])) {
 
   echo 'add_news';
 
@@ -51,10 +51,14 @@ if (isset($_POST['add_news'])) {
   $description_image_news = $_POST['description_image_news'];
   $photography_news = $_POST['photography_news'];
   $reading_time_news = $_POST['reading_time_news'];
+  $publicity_news   = $_POST['publicity_news'];
+  $choose_editors_news   = $_POST['choose_editors_news'];
+  $emphasis_news   = $_POST['emphasis_news'];
+  $relevant_news = $_POST['relevant_news'];
   $date_create = date('d-m-Y');
   $date_update =  date('d-m-Y');
 
-  $sql = $pdo->prepare("INSERT INTO news values(null,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+  $sql = $pdo->prepare("INSERT INTO news values(null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
   if ($sql->execute(array(
     $title_news,
@@ -68,10 +72,16 @@ if (isset($_POST['add_news'])) {
     $description_image_news,
     $photography_news,
     $reading_time_news,
+    $publicity_news,
+    $choose_editors_news,
+    $emphasis_news,
+    $relevant_news,
     $date_create,
     $date_update
   ))) {
     header('Location: http://localhost/web-pungo-andongo-php/dashboard/news');
+  } else {
+    header('Location: http://localhost/web-pungo-andongo-php/dashboard/');
   };
 };
 

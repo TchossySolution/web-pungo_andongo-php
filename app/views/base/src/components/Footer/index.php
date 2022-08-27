@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . "/src/components/Footer/styles.css")?>">
+<link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Footer/style.css") ?>">
 
 <footer id="footer">
   <div class="footerTop">
@@ -7,9 +7,7 @@
         <div>
           <h3 class="footerTitle">Sobre nós</h3>
 
-          <h1 class="footerTitleSite">
-            <?= SITE ?>
-          </h1>
+          <img width="140px" height="130px" src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/JPA.jpg") ?>" alt="">
 
         </div>
 
@@ -29,7 +27,7 @@
 
         <div class="notice">
           <div class="imageContainer">
-            <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp")?>" alt="">
+            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
           </div>
 
           <div class="noticeContent">
@@ -41,7 +39,7 @@
 
         <div class="notice">
           <div class="imageContainer">
-            <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp")?>" alt="">
+            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
           </div>
 
           <div class="noticeContent">
@@ -54,7 +52,7 @@
 
         <div class="notice">
           <div class="imageContainer">
-            <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp")?>" alt="">
+            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
           </div>
 
           <div class="noticeContent">
@@ -71,7 +69,7 @@
 
         <div class="commentary">
           <div class="imageContainer">
-            <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp")?>" alt="">
+            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
           </div>
 
           <div class="commentaryContent">
@@ -83,7 +81,7 @@
 
         <div class="commentary">
           <div class="imageContainer">
-            <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp")?>" alt="">
+            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
           </div>
 
           <div class="commentaryContent">
@@ -95,7 +93,7 @@
 
         <div class="commentary">
           <div class="imageContainer">
-            <img src="<?=urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp")?>" alt="">
+            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
           </div>
 
           <div class="commentaryContent">

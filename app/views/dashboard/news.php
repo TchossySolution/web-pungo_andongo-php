@@ -40,6 +40,18 @@
     <input type="text" name="reading_time_news" placeholder="Digite o tempo de leitura" require>
     <br>
 
+    <input type="text" name="publicity_news" placeholder="É uma publicidade?" require>
+    <br>
+
+    <input type="text" name="choose_editors_news" placeholder="Está noticia é uma escolha dos editores?" require>
+    <br>
+
+    <input type="text" name="emphasis_news" placeholder="Está noticia está em destaque?" require>
+    <br>
+
+    <input type="text" name="relevant_news" placeholder="Está noticia é relevante?" require>
+    <br>
+
 
     <div>
       <button name="create_news">

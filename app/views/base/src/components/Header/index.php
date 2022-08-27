@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . "/src/components/Header/style.css")?>">
+  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Header/style.css") ?>">
 
   <header id="header">
     <div class="headerPrimary">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="logoHeaderContainer">
-        <a href="<?=urlProject()?>">
+        <a href="<?= urlProject() ?>">
           <h1> <?= SITE ?></h1>
         </a>
       </div>
@@ -35,13 +35,19 @@
 
     <div class="headerSecondary">
       <div class="dateContainer">
-        <p> Terça-feira, 23 de Janeiro de 2022</p>
+        <p>
+          <?php
+          setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+          date_default_timezone_set('America/Sao_Paulo');
+          echo strftime('%A, %d de %B de %Y', strtotime('today'));
+          ?>
+        </p>
       </div>
 
       <nav class="navContainer">
         <ul>
           <li>
-            <a href="<?=urlProject()?>">Casa</a>
+            <a href="<?= urlProject() ?>">Casa</a>
           </li>
           <li>
             <a href="">Sobre</a>
