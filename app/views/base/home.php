@@ -29,15 +29,15 @@ $emphasis_newsList = $pdo->prepare("SELECT * FROM news where emphasis_news='sim'
 $emphasis_newsList->execute();
 
 // Mais noticias sessão 1
-$moreNews1 = $pdo->prepare("SELECT * FROM news limit 6, 6 ");
+$moreNews1 = $pdo->prepare("SELECT * FROM news limit 6, 1 ");
 $moreNews1->execute();
-$moreNewsList1 = $pdo->prepare("SELECT * FROM news limit 5, 9 ");
+$moreNewsList1 = $pdo->prepare("SELECT * FROM news limit 5, 4 ");
 $moreNewsList1->execute();
 
 // Mais noticias sessão 2
-$moreNews2 = $pdo->prepare("SELECT * FROM news limit 10, 10 ");
+$moreNews2 = $pdo->prepare("SELECT * FROM news limit 9, 1 ");
 $moreNews2->execute();
-$moreNewsList2 = $pdo->prepare("SELECT * FROM news limit 11, 5 ");
+$moreNewsList2 = $pdo->prepare("SELECT * FROM news limit 11, 4 ");
 $moreNewsList2->execute();
 
 // Noticias Relevantes
@@ -45,7 +45,8 @@ $relevant_news = $pdo->prepare("SELECT * FROM news where 	relevant_news='sim' li
 $relevant_news->execute();
 ?>
 
-<link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/homeStyle.css") ?>">
+<link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/homeStyles.css") ?>">
+
 
 <main class="homeContainer">
   <!-- swiper section starts  -->
@@ -86,7 +87,7 @@ $relevant_news->execute();
 
   <section class="choosesEditors">
     <div class="container">
-      <h1> <span>Escolha</span> dos editores </h1>
+      <h1> <span style="color: red;">Escolha</span> dos editores </h1>
 
       <div class="choosesContainer">
         <?php
@@ -122,7 +123,7 @@ $relevant_news->execute();
   <section class="publicity">
     <div class="container">
       <div class='containerImage'>
-        <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/pub1.webp") ?>" alt="">
+        <img src="<?= urlProject("/app/_imagesDb/banner.jpg") ?>" alt="">
       </div>
     </div>
   </section>
@@ -400,8 +401,12 @@ $relevant_news->execute();
                     <h1><?= $author_name ?></h1>
 
                     <div class="noticeInfo">
+                      <p><?= $data['resume_news'] ?></p>
+                    </div>
+                    <div class="noticeInfo">
                       <p><?= $data['date_create'] ?></p>
                     </div>
+
 
                   </div>
                 </div>
@@ -413,9 +418,7 @@ $relevant_news->execute();
 
           <div class="publicityLittle">
             <div class='containerImage'>
-              <img
-                src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/728X90-banner-02.jpg?>"
-                alt="">
+              <img src="https://www.unitel.st/img/slide/bs1896x617px-BigNet.jpg" alt="">
             </div>
           </div>
 
@@ -448,7 +451,7 @@ $relevant_news->execute();
                     <p><i class="fa-regular fa-comment-dots"></i> 3</p>
                   </div>
 
-                  <p>$data['resume_news'] </p>
+                  <p><?= $data['resume_news'] ?></p>
                 </div>
               </div>
             </a>
@@ -476,6 +479,10 @@ $relevant_news->execute();
 
                   <div class="noticeContent">
                     <h1><?= $data['title_news'] ?></h1>
+
+                    <div class="noticeInfo">
+                      <p><?= $data['resume_news'] ?></p>
+                    </div>
 
                     <div class="noticeInfo">
                       <p><?= $data['date_create'] ?></p>
@@ -571,7 +578,7 @@ $relevant_news->execute();
   <section class="publicity">
     <div class="container">
       <div class='containerImage'>
-        <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/pub1.webp") ?>" alt="">
+        <img src="https://grupoexecutive.files.wordpress.com/2010/01/gpl_beber_outdoor.jpg" alt="">
       </div>
     </div>
   </section>

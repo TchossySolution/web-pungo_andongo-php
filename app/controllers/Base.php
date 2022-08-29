@@ -45,10 +45,10 @@ class Base
     $page_name = "search";
     echo $this->templates->render($page_name, []);
   }
-  public function category(): void
+  public function category($categoryData): void
   {
     $page_name = "category";
-    echo $this->templates->render($page_name, []);
+    echo $this->templates->render($page_name, ["categoryData" => $categoryData]);
   }
   public function author(): void
   {

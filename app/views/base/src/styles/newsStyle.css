@@ -87,7 +87,7 @@ span {
   position: relative;
   width: 100%;
   max-width: 16rem;
-  min-width: 12rem;
+  min-width: 16rem;
   max-height: 18rem;
 }
 .detailsNewsContainer

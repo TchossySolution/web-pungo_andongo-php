@@ -6,16 +6,41 @@ if (isset($_POST['create_news'])) {
 
   echo 'add_news';
 
+  $data = date('D');
+  $mes = date('M');
+  $dia = date('d');
+  $ano = date('Y');
+
+  $semana = array(
+    'Sun' => 'Domingo',
+    'Mon' => 'Segunda-Feira',
+    'Tue' => 'Terca-Feira',
+    'Wed' => 'Quarta-Feira',
+    'Thu' => 'Quinta-Feira',
+    'Fri' => 'Sexta-Feira',
+    'Sat' => 'Sábado'
+  );
+
+  $mes_extenso = array(
+    'Jan' => 'Janeiro',
+    'Feb' => 'Fevereiro',
+    'Mar' => 'Marco',
+    'Apr' => 'Abril',
+    'May' => 'Maio',
+    'Jun' => 'Junho',
+    'Jul' => 'Julho',
+    'Aug' => 'Agosto',
+    'Nov' => 'Novembro',
+    'Sep' => 'Setembro',
+    'Oct' => 'Outubro',
+    'Dec' => 'Dezembro'
+  );
+
   $size_max = 2097152; //2MB
   $accept  = array("jpg", "png", "jpeg");
   $extension  = pathinfo($_FILES['image_news']['name'], PATHINFO_EXTENSION);
 
-  setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-  date_default_timezone_set('America/Sao_Paulo');
-  $completeDate = strftime('%A, %d de %B de %Y', strtotime('today'));
-
-  // $dateNew = date('d-m-Y H:i:s');
-  // $dateNewComplete = "../_imageDB/date-$dateNew/";
+  $completeDate =  $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";
 
   if ($_FILES['image_news']['size'] >= $size_max) {
     echo "Arquivo excedeu o tamanho máximo de 2MB";

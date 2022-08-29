@@ -6,9 +6,39 @@ if (isset($_POST['create_category'])) {
 
   echo 'add_category';
 
+  $data = date('D');
+  $mes = date('M');
+  $dia = date('d');
+  $ano = date('Y');
+
+  $semana = array(
+    'Sun' => 'Domingo',
+    'Mon' => 'Segunda-Feira',
+    'Tue' => 'Terca-Feira',
+    'Wed' => 'Quarta-Feira',
+    'Thu' => 'Quinta-Feira',
+    'Fri' => 'Sexta-Feira',
+    'Sat' => 'Sábado'
+  );
+
+  $mes_extenso = array(
+    'Jan' => 'Janeiro',
+    'Feb' => 'Fevereiro',
+    'Mar' => 'Marco',
+    'Apr' => 'Abril',
+    'May' => 'Maio',
+    'Jun' => 'Junho',
+    'Jul' => 'Julho',
+    'Aug' => 'Agosto',
+    'Nov' => 'Novembro',
+    'Sep' => 'Setembro',
+    'Oct' => 'Outubro',
+    'Dec' => 'Dezembro'
+  );
+
   $name_category = $_POST['name_category'];
-  $date_create = date('d-m-Y');
-  $date_update =  date('d-m-Y');
+  $date_create =   $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";;
+  $date_update =    $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";;
 
   $sql = $pdo->prepare("INSERT INTO categories values(null,?,?,?)");
 
