@@ -1,6 +1,7 @@
 /* detailsNewsContainer */
 .detailsNewsContainer {
   width: 100%;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -623,4 +624,14 @@ span {
   p {
   font-size: 0.9rem;
   color: #535353;
+}
+
+@media (max-width: 1124px) {
+  .detailsNewsContainer .container .containerAllContent {
+    margin: 2rem 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }

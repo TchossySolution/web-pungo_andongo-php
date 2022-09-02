@@ -1,6 +1,6 @@
 {
-  "name": "hp/web-pungo_a_ndongo-php",
-  "description": "Web site para o jornal Pungo-a-Ndongo",
+  "name": "hp/jornal-pungo-andongo",
+  "description": "Web site para o jornal Pungo-Andongo",
   "minimum-stability": "stable",
   "license": "MIT ",
   "authors": [

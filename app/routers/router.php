@@ -30,7 +30,9 @@ function router()
   $router->get("/", "Dash:home");
   $router->get("/users", "Dash:users");
   $router->get("/news", "Dash:news");
+  $router->get("/publicity", "Dash:publicity");
   $router->get("/categories", "Dash:categories");
+  $router->get("/categories{function}", "Dash:categories");
   $router->get("/authors", "Dash:authors");
   $router->get("/messages", "Dash:messages");
   $router->get("/newsLetters", "Dash:newsLetters");
@@ -41,8 +43,4 @@ function router()
 
 
   $router->dispatch();
-
-  if ($router->error()) {
-    $router->redirect("/ops/{$router->error()}");
-  }
 }

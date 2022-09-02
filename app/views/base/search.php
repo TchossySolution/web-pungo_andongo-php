@@ -1,6 +1,6 @@
  <?php $this->layout('_theme') ?>
 
- <link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/searchStyled.css")?>">
+ <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/searchStyled.css") ?>">
 
  <main class="searchContainer">
    <div class="container">

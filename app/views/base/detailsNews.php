@@ -72,7 +72,9 @@ $news->execute();
       <div class="containerLeft">
 
         <div class="categoryNewsContainer">
-          <strong class="categoryNews"> <?= $category_name ?> </strong>
+          <a href="<?= urlProject("news/search/category/$category_name/1") ?>">
+            <strong class="categoryNews"> <?= $category_name ?> </strong>
+          </a>
         </div>
 
         <h1><?= $data['title_news'] ?></h1>
@@ -83,10 +85,17 @@ $news->execute();
 
         <div class="infoNews">
           <div class="imageContainer">
-            <img src="<?= $data['image_news'] ?>" alt="">
+            <img src="https://argumentumpericias.com.br/biblioteca/2019/09/sem-imagem-avatar.png" alt="">
           </div>
           <p>
-            Por <strong><?= $author_name ?></strong> - <span><?= $data['date_create'] ?></span> - <span> Atualizado:
+            Por
+            <a href="<?= urlProject("news/search/author/$author_name/1") ?>">
+              <strong>
+                <?= $author_name ?>
+              </strong>
+            </a>
+            - <span><?= $data['date_create'] ?></span>
+            - <span> Atualizado:
               <?= $data['date_update'] ?></span>
           </p>
 

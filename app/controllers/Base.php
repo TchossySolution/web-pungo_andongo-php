@@ -22,13 +22,6 @@ class Base
     echo $this->templates->render($page_name, []);
   }
 
-  // ABOUT US
-  public function about(): void
-  {
-    $page_name = "page";
-    echo $this->templates->render($page_name, []);
-  }
-
   // NEWS
   public function news(): void
   {
@@ -50,10 +43,10 @@ class Base
     $page_name = "category";
     echo $this->templates->render($page_name, ["categoryData" => $categoryData]);
   }
-  public function author(): void
+  public function author($authorData): void
   {
     $page_name = "author";
-    echo $this->templates->render($page_name, []);
+    echo $this->templates->render($page_name, ["authorData" => $authorData]);
   }
 
   // CONTACTS

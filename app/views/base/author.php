@@ -1,6 +1,31 @@
 <?php $this->layout('_theme') ?>
 
-<link rel="stylesheet" href="<?=urlProject(FOLDER_BASE . BASE_STYLES . "/authorStyle.css")?>">
+<?php
+
+//conexao da base de dados//
+require 'src/db/config.php';
+
+$authorName = $authorData['author_name'];
+$authorId = '0';
+$titleAuthor = ' ';
+$descriptionAuthor = ' ';
+
+
+$allAuthor = $pdo->prepare("SELECT * FROM author WHERE name_author = ?");
+$allAuthor->execute(array($authorName));
+
+foreach ($allAuthor as $author) :
+  $authorId = $author['id'];
+  $titleAuthor = $author['title_author'];
+  $descriptionAuthor = $author['description_author'];
+endforeach;
+
+$allNews = $pdo->prepare("SELECT * FROM news WHERE author_id = ?");
+$allNews->execute(array($authorId));
+
+?>
+
+<link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/authorStyle.css") ?>">
 
 <main class="authorContainer">
   <div class="container">
@@ -12,7 +37,7 @@
       <span> » </span>
       <a href=""> Autor </a>
       <span> » </span>
-      <a href=""> Nome do autor </a>
+      <a href=""> <?= $authorName ?> </a>
       <span> » </span>
       <a href=""> página <span>1</span> </a>
     </div>
@@ -22,27 +47,25 @@
         Publicações do autor:
       </p>
       <strong>
-        Nome do Autor
+        <?= $authorName ?>
       </strong>
     </div>
   </div>
 
   <div class="authorInfoContainer">
-    <img src="<?=URL_BASE . FOLDER_BASE . BASE_IMG . "/author_bg.jpg"?>" alt="">
+    <img src="<?= URL_BASE . FOLDER_BASE . BASE_IMG . "/author_bg.jpg" ?>" alt="">
     <div class="shadow"></div>
     <div class="container">
       <div class="authorContainerLeft">
         <div class="imageContainer">
-          <img src="<?=URL_BASE . FOLDER_BASE . BASE_IMG . "/odnumiar.jpg"?>" alt="">
+          <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" alt="">
         </div>
 
         <div class="infoAuthor">
-          <h1>Rafael Odnumiar </h1>
-          <h3>Autor Senior</h3>
+          <h1><?= $authorName ?> </h1>
+          <h3><?= $titleAuthor ?></h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque repellendus, ut vero ducimus unde rem
-            quisquam
-            nemo adipisci! Non aspernatur ratione omnis fugiat reiciendis atque dolor quibusdam neque expedita eveniet.
+            <?= $descriptionAuthor ?>
           </p>
         </div>
       </div>
@@ -67,46 +90,66 @@
     <div class="containerAllContent">
       <div class="containerLeft">
         <div class="allNotices">
-          <div class="notice">
+          <?php foreach ($allNews as $data) :
+            $author_id = $data['author_id'];
+            $author_name;
 
-            <div class="imageContainer">
-              <img
-                src="https://smartmag.theme-sphere.com/good-news/wp-content/uploads/sites/6/2021/01/Depositphotos_138978856_xl-2015-1024x684.jpg"
-                alt="">
+            $get_author = $pdo->prepare("SELECT * FROM author where id=$author_id");
+            $get_author->execute();
+
+            foreach ($get_author as $author) :
+              $author_name = $author['name_author'];
+            endforeach;
+
+            $categoryName = '';
+            $categoryId = $data['category_id'];
+
+            $allCategory = $pdo->prepare("SELECT * FROM categories WHERE id = ?");
+            $allCategory->execute(array($categoryId));
+
+            foreach ($allCategory as $category) :
+              $categoryName = $category['name_category'];
+            endforeach;
+
+          ?>
+          <a href="<?= urlProject(BASE_DETAILSNEWS . "/" . $data['id']) ?>">
+            <div class="notice">
+
+              <div class="imageContainer">
+                <img src="<?= $data['image_news'] ?>" alt="">
+              </div>
+
+              <div class="noticeContent">
+                <div>
+                  <button class="categoryNews">
+                    <?= $categoryName ?>
+                  </button>
+                </div>
+
+                <h1>
+                  <?= $data['title_news'] ?>
+                </h1>
+
+                <p>
+                  <?= $data['resume_news'] ?>
+                </p>
+
+                <div class="noticeInfo">
+                  <p>Por <strong> <?= $author_name ?></strong> - <span><i class="fa-solid fa-calendar-days"></i>
+                      <?= $data['date_create'] ?></span></p>
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+                </div>
+
+                <div>
+                  <button class="readMore">
+                    Leia mais sobre a noticia
+                    <i class="fa-solid fa-right-long"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-
-            <div class="noticeContent">
-              <div>
-                <button class="categoryNews">
-                  Categoria
-                </button>
-              </div>
-
-              <h1>
-                Linha de produtos Bose na feira: showroom aberto agora em Dubai
-              </h1>
-
-              <p>
-                Para entender o novo smartwatch e outros dispositivos profissionais de foco recente, devemos olhar
-                para
-                o Vale do Silício e o…
-              </p>
-
-              <div class="noticeInfo">
-                <p>Por <strong>Rafael Pilartes</strong> - <span><i class="fa-solid fa-calendar-days"></i> 14 de
-                    Janeiro de 2022</span></p>
-                <p><i class="fa-regular fa-comment-dots"></i> 3</p>
-              </div>
-
-              <div>
-                <button class="readMore">
-                  Leia mais sobre a noticia
-                  <i class="fa-solid fa-right-long"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
+          </a>
+          <?php endforeach ?>
         </div>
 
       </div>

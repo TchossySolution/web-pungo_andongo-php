@@ -41,6 +41,12 @@ html::-webkit-scrollbar-thumb {
 body {
   background: #fff;
 }
+body.stop-scrolling {
+  height: 100%;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 h1 {
   font-family: 'Public Sans', sans-serif;
 }

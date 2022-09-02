@@ -14,10 +14,10 @@ if ($mode == 'producao') {
   $dbPassword = "adm_tchossy123";
   $dbName = "jornangr_pungo_andongo";
 }
-
 try {
   $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUsername, $dbPassword);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Conectado com sucesso!";
 } catch (PDOException $erro) {
   echo "Falha ao se conectar com o banco da dados" . $erro->getMessage()();
 }

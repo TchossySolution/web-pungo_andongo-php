@@ -7,7 +7,7 @@
         <div>
           <h3 class="footerTitle">Sobre nós</h3>
 
-          <img width="140px" height="130px" src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/JPA.jpg") ?>" alt="">
+          <img width="85px" height="70px" src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/JPA.jpg") ?>" alt="">
 
         </div>
 
@@ -17,8 +17,9 @@
         <p>Estamos aceitando novas parcerias agora</p>
 
         <div>
-          <p>Envie-nos um e-mail: <span>info@pungoandongo.com </span></p>
-          <p>Contato: <span>+244 945 394 455</span></p>
+          <p>Envie-nos um e-mail: <span>geral@pungoandongo.com </span></p>
+          <p>Contato: <span>+244 924 010 200</span></p>
+          <p>Contato: <span>+244 924 010 021</span></p>
         </div>
       </div>
 
@@ -115,7 +116,9 @@
         </button>
 
         <button class="buttonSocialMedia">
-          <i class="fa-brands fa-instagram"></i>
+          <a href="https://www.instagram.com/jornalpungoandongo/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
         </button>
 
         <button class="buttonSocialMedia">
@@ -126,22 +129,28 @@
       <div class="linkContainer">
         <ul>
           <li>
-            <a href="">Casa</a>
+            <a href="<?= urlProject() ?>">Casa</a>
+          </li>
+             <li>
+            <a href="<?= urlProject("news/1") ?>">Noticía</a>
           </li>
           <li>
-            <a href="">Política</a>
+            <a href="<?= urlProject("news/search/category/Política/1") ?>">Política</a>
           </li>
           <li>
-            <a href="">Desporto</a>
+            <a href="<?= urlProject("news/search/category/Actualidade/1") ?>">Actualidade</a>
           </li>
           <li>
-            <a href="">Cultura</a>
+            <a href="<?= urlProject("news/search/category/Sociedade/1") ?>">Sociedade</a>
           </li>
           <li>
-            <a href="">Atualidade</a>
+            <a href="<?= urlProject("news/search/category/Cultura/1") ?>">Cultura</a>
+          </li>
+             <li>
+            <a href="<?= urlProject("news/search/category/Especialidade/1") ?>">Especialidade</a>
           </li>
           <li>
-            <a href="">Tecnologia</a>
+            <a href="<?= urlProject("news/search/category/Economia/1") ?>">Economia</a>
           </li>
         </ul>
       </div>

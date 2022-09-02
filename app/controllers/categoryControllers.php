@@ -36,14 +36,16 @@ if (isset($_POST['create_category'])) {
     'Dec' => 'Dezembro'
   );
 
+  $completeDate =  $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";
+
   $name_category = $_POST['name_category'];
-  $date_create =   $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";;
-  $date_update =    $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";;
+  $date_create = $completeDate;
+  $date_update =  $completeDate;
 
   $sql = $pdo->prepare("INSERT INTO categories values(null,?,?,?)");
 
   if ($sql->execute(array($name_category, $date_create, $date_update))) {
-    header('Location: http://localhost/web-pungo-andongo-php/dashboard/categories');
+    header('Location: http://jornalpungoandongo.ao/categories');
   };
 };
 

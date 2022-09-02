@@ -11,7 +11,7 @@
   <link href="<?= urlProject(FOLDER_BASE . "/src/assets/icons/JPA_favicon.jpg") ?>" rel="apple-touch-icon" />
 
   <!-- STYLES -->
-  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/public/styles/globalStyle.css") ?>">
+  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/public/styles/globalStyles.css") ?>">
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,9 @@
 
   <script src="https://kit.fontawesome.com/792a6b2573.js" crossorigin="anonymous"></script>
 
+  <script type="text/javascript" src="<?= urlProject(FOLDER_BASE . BASE_JS . "/HeaderScript.js") ?>">
+  </script>
+
 
   <script type="module">
   import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
@@ -68,12 +71,29 @@
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 3000,
       disableOnInteraction: false
     },
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+
+  const publicitySwiper = new Swiper('.publicitySwiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination-publicitySwiper',
       clickable: true
     }
   })

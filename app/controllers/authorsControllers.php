@@ -35,19 +35,21 @@ if (isset($_POST['create_author'])) {
     'Oct' => 'Outubro',
     'Dec' => 'Dezembro'
   );
-
+  
+  $completeDate =  $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";
+  
   $name_author = $_POST['name_author'];
   $title_author = $_POST['title_author'];
   $description_author = $_POST['description_author'];
-  $date_create =   $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";;
-  $date_update =    $semana["$data"] . ", {$dia} de " . $mes_extenso["$mes"] . " de {$ano}";;
+  $date_create = $completeDate;
+  $date_update =  $completeDate;
 
   $sql = $pdo->prepare("INSERT INTO author values(null,?,?,?,?,?)");
 
   if ($sql->execute(array($name_author, $title_author, $description_author, $date_create, $date_update))) {
-    header('Location: http://localhost/web-pungo-andongo-php/dashboard/authors');
+    header('Location: http://jornalpungoandongo.ao//authors');
   } else {
-    header('Location: http://localhost/web-pungo-andongo-php/dashboard/');
+    header('Location: http://jornalpungoandongo.ao//');
   };
 };
 
