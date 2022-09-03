@@ -27,48 +27,104 @@
 
            <h1>Genérico</h1>
 
-           <p>
-             Director: Filipe Eduardo
-           </p>
-           <p>
-             Director adjunto: Ismael Wakussanga
-           </p>
-           <p>
-             Reportagem:
-           </p>
-           <ul class="list">
-             <li class="item">
-               <p>Alberto Domingos</p>
-             </li>
-             <li>
-               <p>Edgar Muyegy</p>
-             </li>
-             <li>
-               <p>Elmiro Bernardo</p>
-             </li>
-           </ul>
+           <div style="width: 100%; display: flex; gap: 3rem; justify-content: space-between;">
+             <div>
+               <strong>
+                 Director:
+               </strong>
+               <p>
+                 Filipe Eduardo
+               </p>
+               <br>
 
-           <p>
-             Paguinação e artes:
-           </p>
-           <ul class="list">
-             <li>
-               <p>Jurema Samuel e Elsa Eduardo
-                 PUBLICIDADE E MARKETING</p>
-             </li>
-             <li>
-               <p>Délcio Eduardo
-                 COLABORAÇAO</p>
-             </li>
-             <li>
-               <p>Domingos José</p>
-             </li>
-             <li>
-               <p>Marcela Antonio</p>
-             </li>
-           </ul>
+               <strong>
+                 Director adjunto:
+               </strong>
+               <p>
+                 Ismael Wakussanga
+               </p>
+               <br>
 
-           <br>
+               <strong>
+                 Reportagem:
+               </strong>
+               <ul class="list">
+                 <li>
+                   <p>Elmiro Bernardo</p>
+                 </li>
+                 <li class="item">
+                   <p>Alberto Domingos</p>
+                 </li>
+                 <li>
+                   <p>Edgar Muyegy</p>
+                 </li>
+               </ul>
+
+               <br>
+               <strong>
+                 Paginação e artes:
+               </strong>
+               <ul class="list">
+                 <li>
+                   <p>Jurelma Samuel
+                   </p>
+                 </li>
+                 <li>
+                   <p>Elsa Eduardo
+                   </p>
+                 </li>
+               </ul>
+               <br>
+             </div>
+
+             <div>
+               <strong>
+                 Publicidade e Marketing:
+               </strong>
+               <ul class="list">
+                 <li>
+                   <p>Délcio Eduardo
+                   </p>
+                 </li>
+               </ul>
+               <br>
+
+               <strong>
+                 Colaboração:
+               </strong>
+               <ul class="list">
+
+                 <li>
+                   <p>Domingos José</p>
+                 </li>
+                 <li>
+                   <p>Marcela António</p>
+                 </li>
+               </ul>
+
+               <br>
+
+               <span>
+                 Registo nº
+                 <strong style="color: #111; font-size: 1rem;">
+                   744/2015
+                 </strong>
+                 MCS
+               </span>
+
+               <br>
+               <br>
+
+               <span>
+                 <strong>
+                   Propriedade de FAÇANHAS DO POMBO
+                 </strong>
+               </span>
+
+
+             </div>
+           </div>
+
 
            <div class="infoContainer">
              <div class="info">
@@ -122,7 +178,7 @@
        <div class="rightContainer">
          <form action="" method="post" class="formContact">
            <h1>
-             Deixe um recado
+             Deixe uma mensagem
            </h1>
 
            <input type="text" placeholder="Nome*" class="inputForm">

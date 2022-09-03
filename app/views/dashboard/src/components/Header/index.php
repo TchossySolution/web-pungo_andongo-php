@@ -60,9 +60,6 @@
       <nav class="navContainer">
         <ul>
           <li>
-            <a href="<?= urlDashProject() ?>">Geral</a>
-          </li>
-          <li>
             <a href="<?= urlDashProject("news") ?>">Noticias</a>
           </li>
           <li>

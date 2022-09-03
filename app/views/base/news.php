@@ -15,7 +15,7 @@
 
   ?>
 
- <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/newsStyle.css") ?>">
+ <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/newsStyles.css") ?>">
 
  <main class="newsContainer">
    <div class="container">
@@ -45,7 +45,7 @@
           <div class="swiper-button-next"></div> -->
 
        <!-- If we need scrollbar -->
-       <div class="swiper-scrollbar"></div>
+
      </section>
 
 
@@ -65,8 +65,8 @@
               $author_id = $data['author_id'];
               $author_name;
 
-              $get_author = $pdo->prepare("SELECT * FROM author where id=$author_id");
-              $get_author->execute();
+              $get_author = $pdo->prepare("SELECT * FROM author where id=?");
+              $get_author->execute(array($author_id));
 
               foreach ($get_author as $author) :
                 $author_name = $author['name_author'];

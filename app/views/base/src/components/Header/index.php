@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Header/style.css") ?>">
+  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Header/styles.css") ?>">
 
   <header id="header">
     <div class="headerPrimary">

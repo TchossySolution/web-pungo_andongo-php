@@ -14,11 +14,6 @@ class Dash
     $this->templates = new Engine($viewsPath);
   }
 
-  public function home($data)
-  {
-    $page_name = "home";
-    echo $this->templates->render($page_name, $data);
-  }
   public function users($data)
   {
     $page_name = "users";
@@ -52,6 +47,11 @@ class Dash
   public function newsLetters($data)
   {
     $page_name = "newsLetters";
+    echo $this->templates->render($page_name, $data);
+  }
+  public function login($data)
+  {
+    $page_name = "login";
     echo $this->templates->render($page_name, $data);
   }
 

@@ -55,7 +55,7 @@ $publiciteis_12_15->execute();
           <div class="swiper-button-next"></div> -->
 
       <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      <!--<div class="swiper-scrollbar"></div>-->
     </section>
 
     <div class="indicateContainer">
