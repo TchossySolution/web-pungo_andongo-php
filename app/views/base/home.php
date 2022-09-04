@@ -2079,7 +2079,7 @@ $rightNewsList3->execute();
             <?php endforeach ?>
           </div>
 
-          <div class="subscribe">
+          <form method="post" action="<?= urlProject(CONTROLLERS . "/newslettersControllers.php") ?>" class="subscribe">
             <h1>Assine as atualizações</h1>
 
             <p>
@@ -2087,20 +2087,19 @@ $rightNewsList3->execute();
             </p>
 
             <div class="inputContainer">
-              <input type="text" placeholder="Seu endereço de email">
-              <button>Se inscrever</button>
+              <input type="text" name="email" placeholder="Seu endereço de email">
+              <button type="submit" name="send_email">Se inscrever</button>
             </div>
 
             <div class="checkContainer">
               <p>
                 <input type="checkbox" name="" id="">
-                Ao se inscrever, você concorda com nossos termos e nosso acordo de <a href="http://" target="_blank"
-                  rel="noopener noreferrer">
-                  Política de Privacidade .
+                Ao se inscrever, você concorda com nossos termos e nosso acordo de
+                Política de Privacidade .
                 </a>
               </p>
             </div>
-          </div>
+          </form>
         </div>
 
       </div>

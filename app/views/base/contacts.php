@@ -176,21 +176,18 @@
        </div>
 
        <div class="rightContainer">
-         <form action="" method="post" class="formContact">
+         <form method="post" action="<?= urlProject(CONTROLLERS . "/messagesControllers.php") ?>" class="formContact">
            <h1>
              Deixe uma mensagem
            </h1>
 
-           <input type="text" placeholder="Nome*" class="inputForm">
-           <input type="text" placeholder="E-mail*" class="inputForm">
-           <input type="text" placeholder="Sujeito*" class="inputForm">
+           <input type="text" placeholder="Nome*" name="name_ms" class="inputForm">
+           <input type="text" placeholder="E-mail*" name="email_ms" class="inputForm">
 
-           <textarea name="" id="" cols="30" rows="6" placeholder="Sua Mensagem*">
-
-           </textarea>
+           <textarea id="" cols="30" rows="6" name="message_ms">Sua Mensagem*</textarea>
 
            <div>
-             <button>
+             <button type="submit" name="send_messages">
                Envie agora
              </button>
            </div>

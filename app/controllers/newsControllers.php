@@ -118,12 +118,18 @@ if (isset($_POST['create_news'])) {
 };
 
 if (isset($_POST['delete_news'])) {
-  echo 'delete_news';
+  echo 'delete_news -> ';
+  echo $_POST['id'];
 
   $id = $_POST['id'];
 
   $sql = $pdo->prepare("DELETE FROM news WHERE id=?");
-  $sql->execute(array($id));
+
+  if ($sql->execute(array($id))) {
+    header('Location: http://jornalpungoandongo.ao/news');
+  } else {
+    header('Location: http://jornalpungoandongo.ao/');
+  };
 };
 
 if (isset($_POST['update_news'])) {
@@ -194,7 +200,6 @@ if (isset($_POST['update_news'])) {
       echo "Erro: Extensão ($extension) não permitido";
     }
   }
-
 
   $title_news = $_POST['title_news'];
   $resume_news = $_POST['resume_news'];

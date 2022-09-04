@@ -12,9 +12,9 @@
         </div>
 
         <p>Sua fonte para as notícias de estilo de vida. Esta demonstração foi criada especificamente para exibir o uso
-          do tema como um site de estilo de vida. Visite nossa página principal para mais demos.</p>
+          do tema como um site de estilo de vida. Visite nossa página principal para mais informação.</p>
 
-        <p>Estamos aceitando novas parcerias agora</p>
+        <p>Estamos aceitando novas parcerias <b> agora.</b></p>
 
         <div>
           <p>Envie-nos um e-mail: <span>geral@pungoandongo.com </span></p>
@@ -74,7 +74,7 @@
           </div>
 
           <div class="commentaryContent">
-            <span>Rafael Pilartes</span>
+            <span>Raimundo Kilende</span>
 
             <p>Samsung anuncia Galaxy Buds Pro, a maioria dos fones de ouvido premium até agora</p>
           </div>
@@ -131,7 +131,7 @@
           <li>
             <a href="<?= urlProject() ?>">Casa</a>
           </li>
-             <li>
+          <li>
             <a href="<?= urlProject("news/1") ?>">Noticía</a>
           </li>
           <li>
@@ -146,7 +146,7 @@
           <li>
             <a href="<?= urlProject("news/search/category/Cultura/1") ?>">Cultura</a>
           </li>
-             <li>
+          <li>
             <a href="<?= urlProject("news/search/category/Especialidade/1") ?>">Especialidade</a>
           </li>
           <li>
