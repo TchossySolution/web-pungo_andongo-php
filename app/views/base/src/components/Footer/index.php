@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Footer/style.css") ?>">
+<link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Footer/styles.css") ?>">
 
 <footer id="footer">
   <div class="footerTop">
@@ -26,83 +26,57 @@
       <div class="choose">
         <h3 class="footerTitle">Nossas escolhas</h3>
 
-        <div class="notice">
-          <div class="imageContainer">
-            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
+
+        <?php foreach ($footerNewsList1 as $data) :
+          $author_id = $data['author_id'];
+          $author_name;
+
+          $get_author = $pdo->prepare("SELECT * FROM author where id=$author_id");
+          $get_author->execute();
+
+          foreach ($get_author as $author) :
+            $author_name = $author['name_author'];
+          endforeach;
+        ?>
+        <a href="<?= urlProject(BASE_DETAILSNEWS . "/" . $data['id']) ?>">
+          <div class="notice">
+            <div class="imageContainer">
+              <img src="<?= $data['image_news']; ?>" alt="">
+            </div>
+
+            <div class="noticeContent">
+              <p><?= $author_name; ?></p>
+
+              <span><?= $data['date_create']; ?></span>
+            </div>
           </div>
-
-          <div class="noticeContent">
-            <p>Lembrar! Maus hábitos que causam um grande impacto no seu estilo de vida</p>
-
-            <span>13 de janeiro de 2022</span>
-          </div>
-        </div>
-
-        <div class="notice">
-          <div class="imageContainer">
-            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
-          </div>
-
-          <div class="noticeContent">
-            <p>Lembrar! Maus hábitos que causam um grande impacto no seu estilo de vida</p>
-
-            <span>13 de janeiro de 2022</span>
-          </div>
-        </div>
-
-
-        <div class="notice">
-          <div class="imageContainer">
-            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
-          </div>
-
-          <div class="noticeContent">
-            <p>Lembrar! Maus hábitos que causam um grande impacto no seu estilo de vida</p>
-
-            <span>13 de janeiro de 2022</span>
-          </div>
-        </div>
+        </a>
+        <?php endforeach ?>
 
       </div>
 
       <div class="comment">
         <h3 class="footerTitle">Novos comentários</h3>
 
+        <?php foreach ($footerNewsList2 as $data) :
+          $author_id = $data['author_id'];
+          $author_name;
+
+          $get_author = $pdo->prepare("SELECT * FROM author where id=$author_id");
+          $get_author->execute();
+
+          foreach ($get_author as $author) :
+            $author_name = $author['name_author'];
+          endforeach;
+        ?>
         <div class="commentary">
-          <div class="imageContainer">
-            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
-          </div>
-
           <div class="commentaryContent">
-            <span>Raimundo Kilende</span>
+            <span> <?= $author_name ?> </span>
 
-            <p>Samsung anuncia Galaxy Buds Pro, a maioria dos fones de ouvido premium até agora</p>
+            <p> <?= $data['resume_news'] ?> </p>
           </div>
         </div>
-
-        <div class="commentary">
-          <div class="imageContainer">
-            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
-          </div>
-
-          <div class="commentaryContent">
-            <span>Rafael Pilartes</span>
-
-            <p>Samsung anuncia Galaxy Buds Pro, a maioria dos fones de ouvido premium até agora</p>
-          </div>
-        </div>
-
-        <div class="commentary">
-          <div class="imageContainer">
-            <img src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/img450x300.webp") ?>" alt="">
-          </div>
-
-          <div class="commentaryContent">
-            <span>Rafael Pilartes</span>
-
-            <p>Samsung anuncia Galaxy Buds Pro, a maioria dos fones de ouvido premium até agora</p>
-          </div>
-        </div>
+        <?php endforeach ?>
 
       </div>
     </div>

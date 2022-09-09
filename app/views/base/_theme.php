@@ -1,3 +1,18 @@
+<?php
+
+//conexao da base de dados//
+require 'src/db/config.php';
+
+// Mais noticias sessão 1
+$footerNewsList1 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 0, 4 ");
+$footerNewsList1->execute(array(rand(1, 12)));
+// Mais noticias sessão 2
+$footerNewsList2 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 4, 4 ");
+$footerNewsList2->execute(array(rand(1, 12)));
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

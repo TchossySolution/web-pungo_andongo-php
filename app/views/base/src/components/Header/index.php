@@ -24,7 +24,7 @@
         </a>
       </div>
 
-      <div class="loginContainer">
+      <div class="loginContainer" style="opacity: 0;">
         <button class="buttonLogin">
           Inscreva-se
         </button>
