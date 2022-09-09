@@ -111,8 +111,8 @@ if (isset($_POST['update_author'])) {
   $sql = $pdo->prepare("UPDATE author SET name_author=?, title_author=?,  description_author=?, date_update=? WHERE id=?");
 
   if ($sql->execute(array($name_author, $title_author, $description_author, $date_update, $id))) {
-    header('Location: http://jornalpungoandongo.ao/authors');
+    header('Location: http://jornalpungoandongo.ao/dashboard/authors');
   } else {
-    header('Location: http://jornalpungoandongo.ao/authors');
+    header('Location: http://jornalpungoandongo.ao/ops/nn');
   };
 };

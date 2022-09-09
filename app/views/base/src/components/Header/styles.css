@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #000000;
+  background-color: var(--main-color);
 }
 
 /* social Media Container */
@@ -24,7 +24,7 @@
 #header .headerPrimary .socialMediaContainer .buttonSocialMedia {
   width: 2.4rem;
   height: 2.4rem;
-  background-color: var(--txt-normal);
+  background-color: #fff;
 
   display: flex;
   align-items: center;
@@ -40,16 +40,15 @@
 }
 
 #header .headerPrimary .socialMediaContainer .buttonSocialMedia i {
-  color: #fff;
+  color: #000000;
   font-size: 1rem;
 }
 
 /* Logo  */
 #header .headerPrimary .logoHeaderContainer h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--main-color);
-  font-family: 'Barlow', sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  font-family: 'Zilla Slab', serif;
 
   /* text-transform: uppercase; */
 }
@@ -76,12 +75,12 @@
   background-color: transparent;
 }
 #header .headerPrimary .loginContainer button.buttonLogin {
-  border: 0.1rem solid #ddd;
+  border: 0.1rem solid #fff;
 }
 #header .headerPrimary .loginContainer button.buttonRegister {
   display: flex;
   gap: 0.8rem;
-  color: #a0a0a0;
+  color: #fff;
 }
 #header .headerPrimary .loginContainer button.buttonRegister i {
   font-size: 1.5rem;

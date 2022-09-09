@@ -4,7 +4,7 @@ include_once('../db/config.php');
 
 if (isset($_POST['create_publicity'])) {
 
-  echo 'add_publicity';
+  echo 'Criar Publicidade <br>';
 
   $size_max = 2097152; //2MB
   $accept  = array("jpg", "png", "jpeg");
@@ -46,7 +46,10 @@ if (isset($_POST['create_publicity'])) {
   // $dateNewComplete = "../_imageDB/date-$dateNew/";
 
   if ($_FILES['image_publicity']['size'] >= $size_max) {
-    echo "Arquivo excedeu o tamanho máximo de 2MB";
+    echo "Arquivo excedeu o tamanho máximo de 2MB <br>";
+    echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+
+    exit();
   } else {
     if (in_array($extension, $accept)) {
       // echo "Permitido";
@@ -64,10 +67,16 @@ if (isset($_POST['create_publicity'])) {
       if (move_uploaded_file($tmp, $folder . $newName)) {
         echo "Upload realizado com sucesso!";
       } else {
-        echo "Erro: ao realizar Upload...";
+        echo "Erro: ao realizar Upload... <br>";
+        echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+
+        exit();
       }
     } else {
-      echo "Erro: Extensão ($extension) não permitido";
+      echo "Erro: Extensão ($extension) não permitido <br>";
+      echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+
+      exit();
     }
   }
 
@@ -107,7 +116,7 @@ if (isset($_POST['delete_publicity'])) {
 };
 
 if (isset($_POST['update_publicity'])) {
-  echo 'update_publicity';
+  echo 'Atualizar Publicidade <br>';
 
   $size_max = 2097152; //2MB
   $accept  = array("jpg", "png", "jpeg");
@@ -149,7 +158,10 @@ if (isset($_POST['update_publicity'])) {
   // $dateNewComplete = "../_imageDB/date-$dateNew/";
 
   if ($_FILES['image_publicity']['size'] >= $size_max) {
-    echo "Arquivo excedeu o tamanho máximo de 2MB";
+    echo "Arquivo excedeu o tamanho máximo de 2MB <br>";
+    echo "<a href='http://jornalpungoandongo.ao/dashboard/publicity'> Voltar </a>";
+
+    exit();
   } else {
     if (in_array($extension, $accept)) {
       // echo "Permitido";
@@ -167,10 +179,16 @@ if (isset($_POST['update_publicity'])) {
       if (move_uploaded_file($tmp, $folder . $newName)) {
         echo "Upload realizado com sucesso!";
       } else {
-        echo "Erro: ao realizar Upload...";
+        echo "Erro: ao realizar Upload... <br>";
+        echo "<a href='http://jornalpungoandongo.ao/dashboard/publicity'> Voltar </a>";
+
+        exit();
       }
     } else {
-      echo "Erro: Extensão ($extension) não permitido";
+      echo "Erro: Extensão ($extension) não permitido <br>";
+      echo "<a href='http://jornalpungoandongo.ao/dashboard/publicity'> Voltar </a>";
+
+      exit();
     }
   }
 
@@ -183,8 +201,8 @@ if (isset($_POST['update_publicity'])) {
   $sql = $pdo->prepare("UPDATE publicity SET image_publicity=?, description_publicity=?,  link_publicity=?, date_expire=? WHERE id=?");
 
   if ($sql->execute(array($image_publicity, $description_publicity, $link_publicity, $date_expire, $id))) {
-    header('Location: http://jornalpungoandongo.ao/authors');
+    header('Location: http://jornalpungoandongo.ao/dashboard/publicity');
   } else {
-    header('Location: http://jornalpungoandongo.ao/authors');
+    header('Location: http://jornalpungoandongo.ao/dashboard/ops/nn');
   };
 };

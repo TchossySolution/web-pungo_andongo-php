@@ -79,16 +79,16 @@
       <nav class="navContainer">
         <ul>
           <li>
-            <a href="<?= urlProject() ?>">Casa</a>
+            <a href="<?= urlProject() ?>">Destaques</a>
           </li>
           <li>
-            <a href="<?= urlProject("news/1") ?>">Noticía</a>
+            <a href="<?= urlProject("news/1") ?>">Noticias</a>
           </li>
           <li>
             <a href="<?= urlProject("news/search/category/Política/1") ?>">Política</a>
           </li>
           <li>
-            <a href="<?= urlProject("news/search/category/Actualidade/1") ?>">Actualidade</a>
+            <a href="<?= urlProject("news/search/category/Actualidade/1") ?>">Atualidade</a>
           </li>
           <li>
             <a href="<?= urlProject("news/search/category/Sociedade/1") ?>">Sociedade</a>

@@ -11,9 +11,9 @@ $allNews = $pdo->prepare("SELECT * FROM news ");
 $allNews->execute();
 
 // Publicidades
-$publiciteis_1_3 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 0, 3 ");
+$publiciteis_1_3 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 0, 4 ");
 $publiciteis_1_3->execute();
-$publiciteis_4_6 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 4, 3 ");
+$publiciteis_4_6 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 4, 4 ");
 $publiciteis_4_6->execute();
 
 // Publicidades
@@ -193,7 +193,6 @@ $rightNewsList3->execute();
 .choosesEditors .choosesContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
@@ -1505,14 +1504,14 @@ $rightNewsList3->execute();
       <?php endforeach ?>
     </div>
     <!-- If we need pagination -->
-    <div class="swiper-pagination-publicitySwiper"></div>
+    <!-- <div class="swiper-pagination-publicitySwiper"></div> -->
 
     <!-- If we need navigation buttons -->
     <!-- <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div> -->
 
     <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+    <!-- <div class="swiper-scrollbar"></div> -->
   </section>
 
   <section class="lastNotices">
@@ -1549,7 +1548,7 @@ $rightNewsList3->execute();
                 <div class="noticeInfo">
                   <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> - <span><i
                         class="fa-solid fa-calendar-days"></i> <?= $data['date_create'] ?></span></p>
-                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                 </div>
 
                 <p><?= $data['resume_news'] ?></p>
@@ -1590,7 +1589,7 @@ $rightNewsList3->execute();
                   <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> -
                     <span><?= $data['date_create'] ?></span>
                   </p>
-                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                 </div>
 
                 <p><?= $data['resume_news'] ?></p>
@@ -1670,7 +1669,7 @@ $rightNewsList3->execute();
               <div class="noticeInfo">
                 <p><i class="fa-solid fa-user"></i> <strong> <?= $author_name ?> </strong> - <span> <i
                       class="fa-solid fa-calendar-days"></i> <?= $data['date_create'] ?> </span></p>
-                <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
               </div>
             </a>
           </div>
@@ -1704,7 +1703,7 @@ $rightNewsList3->execute();
                 <div class="noticeInfo">
                   <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> - <span><i
                         class="fa-solid fa-calendar-days"></i> <?= $data['date_create'] ?></span></p>
-                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                 </div>
 
               </div>
@@ -1752,7 +1751,7 @@ $rightNewsList3->execute();
                   <div class="noticeInfo">
                     <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> - <span><i
                           class="fa-solid fa-calendar-days"></i> <?= $data['date_create'] ?></span></p>
-                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                   </div>
 
                   <p><?= $data['resume_news'] ?></p>
@@ -1832,7 +1831,7 @@ $rightNewsList3->execute();
                   <div class="noticeInfo">
                     <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> - <span><i
                           class="fa-solid fa-calendar-days"></i> <?= $data['date_create'] ?></span></p>
-                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                   </div>
 
                   <p><?= $data['resume_news'] ?></p>
@@ -1915,7 +1914,7 @@ $rightNewsList3->execute();
                     <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> -
                       <span><?= $data['date_create'] ?></span>
                     </p>
-                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                   </div>
                 </div>
 
@@ -1930,35 +1929,24 @@ $rightNewsList3->execute();
     </div>
   </section>
 
-  <!-- 
   <section class="publicitySwiper">
-    <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <?php foreach ($publiciteis_4_6 as $data) : ?>
-    <div class="swiper-slide">
-      <section class="slide" id="slide">
-        <section class="publicity">
-          <div class="container">
-            <div class='containerImage'>
-              <img src=" <?= $data['image_publicity'] ?>" alt="">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <?php foreach ($publiciteis_4_6 as $data) : ?>
+      <div class="swiper-slide">
+        <section class="slide" id="slide">
+          <section class="publicity">
+            <div class="container">
+              <div class='containerImage'>
+                <img src=" <?= $data['image_publicity'] ?>" alt="">
+              </div>
             </div>
-          </div>
+          </section>
         </section>
-      </section>
+      </div>
+      <?php endforeach ?>
     </div>
-    <?php endforeach ?>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination-publicitySwiper"></div>
-
-  <!-- If we need navigation buttons -->
-  <!-- <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div> -->
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-  </section> -->
+  </section>
 
   <section class="noticesRelevant">
     <div class="container">
@@ -1996,7 +1984,7 @@ $rightNewsList3->execute();
                   <div class="noticeInfo">
                     <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> - <span><i
                           class="fa-solid fa-calendar-days"></i> <?= $data['date_create'] ?></span></p>
-                    <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                   </div>
 
                   <p> <?= $data['resume_news'] ?></p>
@@ -2039,7 +2027,7 @@ $rightNewsList3->execute();
                   <p><i class="fa-solid fa-user"></i> <strong><?= $author_name ?></strong> -
                     <span><?= $data['date_create'] ?></span>
                   </p>
-                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
+
                 </div>
 
                 <p><?= $data['resume_news'] ?></p>

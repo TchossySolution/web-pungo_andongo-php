@@ -1,7 +1,7 @@
 <?php
 
 define('URL_BASE', "http://localhost/web-pungo-andongo-php");
-define('SITE', "Pungo a Ndongo");
+define('SITE', "Pungo Andongo");
 
 define('CONTROLLERS', 'app/controllers');
 
