@@ -89,29 +89,29 @@
             <a href="<?= urlProject("news/search/category/Política/1") ?>">Política</a>
           </li>
           <li>
-            <a href="<?= urlProject("news/search/category/Actualidade/1") ?>">Atualidade</a>
-          </li>
-          <li>
             <a href="<?= urlProject("news/search/category/Sociedade/1") ?>">Sociedade</a>
-          </li>
-          <li>
-            <a href="<?= urlProject("news/search/category/Cultura/1") ?>">Cultura</a>
-          </li>
-          <li>
-            <a href="<?= urlProject("news/search/category/Especialidade/1") ?>">Especialidade</a>
           </li>
           <li>
             <a href="<?= urlProject("news/search/category/Economia/1") ?>">Economia</a>
           </li>
           <li>
-            <a href="<?= urlProject("news/search/category/Internacional/1") ?>">Internacional</a>
+            <a href="<?= urlProject("news/search/category/Saúde/1") ?>">Saúde</a>
           </li>
           <li>
-            <a href="<?= urlProject("news/search/category/Lazer/1") ?>">Lazer</a>
+            <a href="<?= urlProject("news/search/category/Ciência/1") ?>">Ciência</a>
+          </li>
+          <li>
+            <a href="<?= urlProject("news/search/category/Cultura/1") ?>">Cultura</a>
           </li>
           <li>
             <a href="<?= urlProject("news/search/category/Desporto/1") ?>">Desporto</a>
           </li>
+          <li>
+            <a href="<?= urlProject("news/search/category/Mundo/1") ?>">Mundo</a>
+          </li>
+          <!-- <li>
+            <a href="<?= urlProject("news/search/category/Lazer/1") ?>">Lazer</a>
+          </li> -->
           <li>
             <a href="<?= urlProject("contacts") ?>">Contacto</a>
           </li>
