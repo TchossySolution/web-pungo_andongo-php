@@ -20,7 +20,8 @@
 
       <div class="logoHeaderContainer">
         <a href="<?= urlProject() ?>">
-          <h1> <?= SITE ?></h1>
+          <h1 style="font-style: italic;"><span style="font-size: 76px; color: #fff; ">P</span>ungo <span
+              style="font-size: 76px; color: #fff; ">A</span>ndongo</h1>
         </a>
       </div>
 

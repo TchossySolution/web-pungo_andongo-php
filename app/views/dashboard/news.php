@@ -2,6 +2,13 @@
 
 <?php
 
+session_start();
+
+if ((isset($_SESSION['isAdm']) != "adm")) {
+  unset($_SESSION['isAdm']);
+  header('Location: http://jornalpungoandongo.ao/dashboard');
+}
+
 //conexao da base de dados//
 require 'src/db/config.php';
 
@@ -85,6 +92,7 @@ $allCategories2->execute();
         </td>
       </tr>
       <input value="<?= $data['id']; ?>" name="id" hidden>
+      <input value="<?= $data['image_news']; ?>" name="suplente_img" hidden>
 
       <!-- START MODAL EDITE NEWS -->
       <div class="modal fade" id="exampleModal<?= $data['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel"

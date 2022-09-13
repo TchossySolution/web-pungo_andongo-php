@@ -2,6 +2,13 @@
 
 <?php
 
+session_start();
+
+if ((isset($_SESSION['isAdm']) != "adm")) {
+  unset($_SESSION['isAdm']);
+  header('Location: http://jornalpungoandongo.ao/dashboard');
+}
+
 //conexao da base de dados//
 require 'src/db/config.php';
 

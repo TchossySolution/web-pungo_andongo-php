@@ -153,13 +153,19 @@
                  +244 924 010 200
                </p>
                <p>
-                 +244 924 010 021
-               </p>
-               <p>
                  +244 998 912 410
                </p>
                <p>
                  +244 956 498 606
+               </p>
+             </div>
+
+             <div class="info">
+               <div class="iconContainer">
+                 <i class="fa-brands fa-whatsapp"></i>
+               </div>
+               <p>
+                 +244 924 010 021
                </p>
              </div>
 

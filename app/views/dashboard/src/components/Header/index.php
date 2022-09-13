@@ -81,12 +81,12 @@
       </nav>
 
       <div class="searchAndDarkContainer">
-        <button>
-          <i class="fa-solid fa-sun"></i>
-        </button>
-        <button>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <form class="row g-3 needs-validation" novalidate method="post"
+          action="<?= urlProject(CONTROLLERS . "/loginControllers.php") ?>">
+          <button type="submit" name="logOut_Adm" class="dateContainer">
+            Sair <i class="fa-solid fa-arrow-right-from-arc"></i>
+          </button>
+        </form>
       </div>
     </div>
   </header>

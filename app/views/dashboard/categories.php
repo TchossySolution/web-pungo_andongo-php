@@ -2,6 +2,13 @@
 
 <?php
 
+session_start();
+
+if ((isset($_SESSION['isAdm']) != "adm")) {
+  unset($_SESSION['isAdm']);
+  header('Location: http://jornalpungoandongo.ao/dashboard');
+}
+
 //conexao da base de dados//
 require 'src/db/config.php';
 
@@ -96,7 +103,7 @@ $allCategory->execute();
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-              <button type="submit" class="btn btn-primary" name="create_category">Criar Autor</button>
+              <button type="submit" class="btn btn-primary" name="create_category">Criar categoria</button>
             </div>
           </form>
 
