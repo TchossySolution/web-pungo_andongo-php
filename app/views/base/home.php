@@ -4,6 +4,8 @@
 
 $status = 1;
 
+session_start();
+
 //conexao da base de dados//
 require 'src/db/config.php';
 

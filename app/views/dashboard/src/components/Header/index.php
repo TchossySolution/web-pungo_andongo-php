@@ -77,6 +77,9 @@
           <li>
             <a href="<?= urlDashProject("newsLetters") ?>">Newsletter</a>
           </li>
+          <li>
+            <a href="<?= urlDashProject("comments") ?>">Comentários</a>
+          </li>
         </ul>
       </nav>
 

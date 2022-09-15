@@ -36,6 +36,7 @@ function router()
   $router->get("/authors", "Dash:authors");
   $router->get("/messages", "Dash:messages");
   $router->get("/newsLetters", "Dash:newsLetters");
+  $router->get("/comments", "Dash:comments");
 
   // ROTA DE ERROS
   $router->group("/ops");
