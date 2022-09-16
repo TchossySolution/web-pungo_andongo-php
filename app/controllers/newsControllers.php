@@ -69,16 +69,16 @@ if (isset($_POST['create_news'])) {
   if (empty(trim($title_news)) && empty(trim($description_news))) {
     $password_err = "O titulo e a descrição da noticia são campos obrigatórios.";
     echo "<script>
-              alert('O titulo e a descrição da noticia são campos obrigatórios!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard/news';
-            </script>";
+            alert('O titulo e a descrição da noticia são campos obrigatórios!');
+            window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+          </script>";
     exit();
   }
 
 
   if ($_FILES['image_news']['size'] >= $size_max) {
     echo "Arquivo excedeu o tamanho máximo de 2MB<br>";
-    echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+    echo "<a href='https://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
 
     exit();
   } else {
@@ -96,17 +96,17 @@ if (isset($_POST['create_news'])) {
       $newName = "img_news-" . date('d-m-Y') . '-' . date('H') . 'h-' . uniqid() . ".$extension";
 
       if (move_uploaded_file($tmp, $folder . $newName)) {
-        $image_news = 'http://jornalpungoandongo.ao/app/_imagesDb/' . $newName;
+        $image_news = 'https://jornalpungoandongo.ao/app/_imagesDb/' . $newName;
         // echo "Upload realizado com sucesso!";
       } else {
         echo "Erro: ao realizar Upload...<br>";
-        echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+        echo "<a href='https://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
 
         exit();
       }
     } else {
       echo "Erro: Extensão ($extension) não permitido <br>";
-      echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+      echo "<a href='https://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
 
       exit();
     }
@@ -133,9 +133,11 @@ if (isset($_POST['create_news'])) {
     $date_create,
     $date_update
   ))) {
-    header('Location: http://jornalpungoandongo.ao/dashboard/news');
+    echo "<script>
+            window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+          </script>";
   } else {
-    header('Location: http://jornalpungoandongo.ao/dashboard/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/dashboard/ops/nn');
   };
 };
 
@@ -149,9 +151,11 @@ if (isset($_POST['delete_news'])) {
   $sql = $pdo->prepare("DELETE FROM news WHERE id=?");
 
   if ($sql->execute(array($id))) {
-    header('Location: Location: http://jornalpungoandongo.ao/dashboard/news');
+    echo "<script>
+            window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+          </script>";
   } else {
-    header('Location: Location: http://jornalpungoandongo.ao/dashboard/ops/nn');
+    header('Location: Location: https://jornalpungoandongo.ao/dashboard/ops/nn');
   };
 };
 
@@ -225,9 +229,9 @@ if (isset($_POST['update_news'])) {
   if (empty(trim($title_news)) or empty(trim($description_news))) {
     $password_err = "O titulo e a descrição da noticia são campos obrigatórios.";
     echo "<script>
-                alert('O titulo e a descrição da noticia são campos obrigatórios!');
-                window.location.href='http://jornalpungoandongo.ao/dashboard/news';
-              </script>";
+            alert('O titulo e a descrição da noticia são campos obrigatórios!');
+            window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+          </script>";
     exit();
   }
 
@@ -236,8 +240,10 @@ if (isset($_POST['update_news'])) {
   } else {
 
     if ($_FILES['image_news']['size'] >= $size_max) {
-      echo "Arquivo excedeu o tamanho máximo de 2MB <br>";
-
+      echo "<script>
+              alert('Arquivo excedeu o tamanho máximo de 2MB ');
+              window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+            </script>";
       exit();
     } else {
       if (in_array($extension, $accept)) {
@@ -254,18 +260,20 @@ if (isset($_POST['update_news'])) {
         $newName = "img_news-" . date('d-m-Y') . '-' . date('H') . 'h-' . uniqid() . ".$extension";
 
         if (move_uploaded_file($tmp, $folder . $newName)) {
-          $image_news = 'http://jornalpungoandongo.ao/app/_imagesDb/' . $newName;
+          $image_news = 'https://jornalpungoandongo.ao/app/_imagesDb/' . $newName;
 
           echo "Upload realizado com sucesso!";
         } else {
-          echo "Erro: ao realizar Upload...<br>";
-          echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+          echo "<script>
+                  alert('Erro: ao realizar Upload... ');
+                  window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+                </script>";
 
           exit();
         }
       } else {
         echo "Erro: Extensão ($extension) não permitido<br>";
-        echo "<a href='http://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
+        echo "<a href='https://jornalpungoandongo.ao/dashboard/news'> Voltar </a>";
 
         exit();
       }
@@ -298,6 +306,6 @@ if (isset($_POST['update_news'])) {
               window.location.href='https://jornalpungoandongo.ao/dashboard/news';
             </script>";
   } else {
-    header('Location: Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };

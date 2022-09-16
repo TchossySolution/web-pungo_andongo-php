@@ -1,6 +1,6 @@
 <?php
 
-define('URL_BASE', "http://localhost/web-pungo-andongo-php");
+define('URL_BASE', "https://jornalpungoandongo.ao");
 define('SITE', "Pungo Andongo");
 
 define('CONTROLLERS', 'app/controllers');

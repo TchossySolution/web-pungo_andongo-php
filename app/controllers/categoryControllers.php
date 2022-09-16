@@ -48,7 +48,7 @@ if (isset($_POST['create_category'])) {
     $password_err = "O nome da categoria é obrigatório.";
     echo "<script>
               alert('O nome da categoria é obrigatório!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard/categories';
+              window.location.href='https://jornalpungoandongo.ao/dashboard/categories';
             </script>";
     exit();
   }
@@ -56,9 +56,9 @@ if (isset($_POST['create_category'])) {
   $sql = $pdo->prepare("INSERT INTO categories values(null,?,?,?)");
 
   if ($sql->execute(array($name_category, $date_create, $date_update))) {
-    header('Location: http://jornalpungoandongo.ao/dashboard/categories');
+    header('Location: https://jornalpungoandongo.ao/dashboard/categories');
   } else {
-    header('Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };
 
@@ -72,9 +72,9 @@ if (isset($_POST['delete_category'])) {
   $sql = $pdo->prepare("DELETE FROM categories WHERE id=?");
 
   if ($sql->execute(array($id))) {
-    header('Location: http://jornalpungoandongo.ao/dashboard/categories');
+    header('Location: https://jornalpungoandongo.ao/dashboard/categories');
   } else {
-    header('Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };
 
@@ -123,7 +123,7 @@ if (isset($_POST['update_category'])) {
     $password_err = "O nome da categoria é obrigatório.";
     echo "<script>
               alert('O nome da categoria é obrigatório!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard/categories';
+              window.location.href='https://jornalpungoandongo.ao/dashboard/categories';
             </script>";
     exit();
   }
@@ -131,8 +131,8 @@ if (isset($_POST['update_category'])) {
   $sql = $pdo->prepare("UPDATE categories SET name_category=?, date_update=? WHERE id=?");
 
   if ($sql->execute(array($name_category, $date_update, $id))) {
-    header('Location: http://jornalpungoandongo.ao/dashboard/categories');
+    header('Location: https://jornalpungoandongo.ao/dashboard/categories');
   } else {
-    header('Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };

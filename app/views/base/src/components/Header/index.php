@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Header/styles.css") ?>">
+  <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . "/src/components/Header/style.css") ?>">
 
   <div id="id01" class="modal">
     <form class="modal-content animate" enctype="multipart/form-data" method="post"
@@ -108,7 +108,7 @@
 
       <div class="logoHeaderContainer">
         <a href="<?= urlProject() ?>">
-          <h1 style="font-style: italic;"><span>P</span>ungo <span>A</span>ndongo</h1>
+          <img width="385px" height="110px" src="<?= urlProject(FOLDER_BASE . BASE_IMG . "/newLogo.png") ?>" alt="">
         </a>
       </div>
 

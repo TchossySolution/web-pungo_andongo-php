@@ -1,0 +1,398 @@
+#header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Primeira parte do header*/
+#header .headerPrimary {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #151515;
+}
+
+/* social Media Container */
+#header .headerPrimary .socialMediaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#header .headerPrimary .socialMediaContainer .buttonSocialMedia {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem;
+  border-radius: 100%;
+
+  transition: 0.7s ease;
+}
+#header .headerPrimary .socialMediaContainer .buttonSocialMedia:hover {
+  background-color: #747474;
+}
+
+#header .headerPrimary .socialMediaContainer .buttonSocialMedia i {
+  color: #000000;
+  font-size: 1rem;
+}
+
+/* Logo  */
+#header .headerPrimary .logoHeaderContainer h1 {
+  font-size: 4rem;
+  color: var(--main-color);
+  font-family: 'Zilla Slab', serif;
+}
+#header .headerPrimary .logoHeaderContainer h1 span {
+  font-size: 5rem;
+  color: var(--main-color);
+  font-family: 'Zilla Slab', serif;
+}
+
+/* button LOG OUT */
+#header .headerPrimary button.log_out_user {
+  padding: 0.5rem 1.6rem;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* Login container */
+#header .headerPrimary .loginContainer {
+  min-width: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#header .headerPrimary .loginContainer button {
+  color: #fff;
+  font-size: var(--normal-size);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 6rem;
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+}
+#header .headerPrimary .loginContainer button.buttonLogin {
+  min-width: 10rem;
+  border: 0.1rem solid #fff;
+}
+#header .headerPrimary .loginContainer button.buttonRegister {
+  display: flex;
+  gap: 0.8rem;
+  color: #fff;
+}
+#header .headerPrimary .loginContainer button.buttonRegister i {
+  font-size: 1.5rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.modal-content button[type='submit'] {
+  width: 100%;
+  max-width: 20rem;
+  background-color: var(--main-color);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+.modal-content button.cancelbtn {
+  width: 100%;
+  max-width: 20rem;
+  background-color: #747474;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  max-width: 100%;
+  background-color: #545453;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.modalLoginContainer {
+  padding: 1.2rem 2.3rem;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  flex-direction: column;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 99;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+.modal2 {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 99;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  position: relative;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 90%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #606060;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Segunda parte do header */
+#header .headerSecondary {
+  width: 100%;
+  background-color: #151515;
+  padding: 0.4rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+
+  border: 0.08rem solid #7474746e;
+}
+
+/* Date Container */
+#header .headerSecondary .dateContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#header .headerSecondary .dateContainer p {
+  color: #fff;
+  font-size: var(--normal-size);
+  font-weight: 600;
+}
+
+/* Links Container */
+#header .headerSecondary .navContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+#header .headerSecondary .navContainer ul {
+  flex: 1;
+  max-width: 54rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+
+  list-style: none;
+}
+#header .headerSecondary .navContainer ul a {
+  font-size: var(--normal-size);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* search And button Dark mode Container Container */
+#header .headerSecondary .searchAndDarkContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+#header .headerSecondary .searchAndDarkContainer button {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem;
+  border-radius: 100%;
+
+  transition: 0.7s ease;
+}
+#header .headerSecondary .searchAndDarkContainer button i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+#header .headerSecondary .searchAndDarkContainer button.iconMenu {
+  display: none;
+}
+
+@media (max-width: 1380px) {
+  #header .headerSecondary .navContainer {
+    display: none;
+  }
+  #header .headerSecondary .searchAndDarkContainer button.iconMenu {
+    display: flex;
+  }
+}
+@media (max-width: 911px) {
+  #header .headerPrimary {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+#header .headerSecondary.active .navContainer {
+  height: 100%;
+  padding: 2rem 6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: red;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  z-index: 20;
+}
+#header .headerSecondary.active .navContainer ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#header .headerSecondary.active .searchAndDarkContainer button.iconMenu {
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+
+  z-index: 22;
+}

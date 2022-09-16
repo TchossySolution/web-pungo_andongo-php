@@ -21,18 +21,18 @@ if (isset($_POST['login_Adm'])) {
       unset($_SESSION['adm_password']);
       echo "<script>
               alert('Dados do Administrador incorreto!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
             </script>";
     } else {
       $_SESSION['adm_name'] = $adm_name;
       $_SESSION['adm_email'] = $adm_email;
       $_SESSION['isAdm'] = $isAdm;
-      header('Location: http://jornalpungoandongo.ao/dashboard/news');
+      header('Location: https://jornalpungoandongo.ao/dashboard/news');
     }
   } else {
     echo "<script>
               alert('Preencha todos os dados!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
           </script>";
   }
 };
@@ -88,14 +88,14 @@ if (isset($_POST['create_Adm'])) {
     $password_err = "Por favor insira o nome do usuário.";
     echo "<script>
               alert('Por favor insira o nome do usuário!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
             </script>";
     exit();
   } elseif (!preg_match('/^[a-zA-Z0-9_]+$/', trim($adm_name))) {
     $username_err = "O nome de usuário pode conter apenas letras, números e sublinhados.";
     echo "<script>
               alert('O nome de usuário pode conter apenas letras, números e sublinhados!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
             </script>";
   }
 
@@ -103,7 +103,7 @@ if (isset($_POST['create_Adm'])) {
     $password_err = "Por favor insira o email do usuário.";
     echo "<script>
               alert('Por favor insira o email do usuário!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
             </script>";
     exit();
   }
@@ -112,14 +112,14 @@ if (isset($_POST['create_Adm'])) {
     $password_err = "Por favor insira uma senha.";
     echo "<script>
               alert('Por favor insira uma senha!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
             </script>";
     exit();
   } elseif (strlen(trim($adm_password)) < 6) {
     $password_err = "A senha deve ter pelo menos 6 caracteres.";
     echo "<script>
               alert('A senha deve ter pelo menos 6 caracteres!');
-              window.location.href='http://jornalpungoandongo.ao/dashboard';
+              window.location.href='https://jornalpungoandongo.ao/dashboard';
             </script>";
     exit();
   }
@@ -135,7 +135,7 @@ if (isset($_POST['create_Adm'])) {
       unset($_SESSION['adm_password']);
       echo "<script>
     alert('Este email já está cadastrado!');
-    window.location.href='http://jornalpungoandongo.ao/dashboard';
+    window.location.href='https://jornalpungoandongo.ao/dashboard';
     </script>";
     } else {
       $sql = $pdo->prepare("INSERT INTO user_adm values(null,?,?,?,?,?)");
@@ -144,7 +144,7 @@ if (isset($_POST['create_Adm'])) {
       $_SESSION['adm_name'] = $adm_name;
       $_SESSION['adm_email'] = $adm_email;
       $_SESSION['isAdm'] = $isAdm;
-      header('Location: http://jornalpungoandongo.ao/dashboard/news');
+      header('Location: https://jornalpungoandongo.ao/dashboard/news');
     }
   }
 }
@@ -156,9 +156,9 @@ if (isset($_POST['delete_Adm'])) {
   $sql = $pdo->prepare("DELETE FROM user_adm WHERE id=?");
 
   if ($sql->execute(array($id))) {
-    header('Location: http://jornalpungoandongo.ao/dashboard/dashboard/news');
+    header('Location: https://jornalpungoandongo.ao/dashboard/dashboard/news');
   } else {
-    header('Location: http://jornalpungoandongo.ao/dashboard/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/dashboard/ops/nn');
   };
 };
 
@@ -166,7 +166,7 @@ if (isset($_POST['logOut_Adm'])) {
   unset($_SESSION['adm_name']);
   unset($_SESSION['adm_email']);
   unset($_SESSION['isAdm']);
-  header('Location: http://jornalpungoandongo.ao/dashboard/');
+  header('Location: https://jornalpungoandongo.ao/dashboard/');
 };
 
-header('Location: http://jornalpungoandongo.ao/dashboard/');
+header('Location: https://jornalpungoandongo.ao/dashboard/');

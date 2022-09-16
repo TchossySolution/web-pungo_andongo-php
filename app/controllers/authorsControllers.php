@@ -57,9 +57,9 @@ if (isset($_POST['create_author'])) {
   $sql = $pdo->prepare("INSERT INTO author values(null,?,?,?,?,?)");
 
   if ($sql->execute(array($name_author, $title_author, $description_author, $date_create, $date_update))) {
-    header('Location: http://jornalpungoandongo.ao/authors');
+    header('Location: https://jornalpungoandongo.ao/authors');
   } else {
-    header('Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };
 
@@ -73,9 +73,9 @@ if (isset($_POST['delete_author'])) {
   $sql = $pdo->prepare("DELETE FROM author WHERE id=?");
 
   if ($sql->execute(array($id))) {
-    header('Location: http://jornalpungoandongo.ao/authors');
+    header('Location: https://jornalpungoandongo.ao/authors');
   } else {
-    header('Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };
 
@@ -134,8 +134,8 @@ if (isset($_POST['update_author'])) {
   $sql = $pdo->prepare("UPDATE author SET name_author=?, title_author=?,  description_author=?, date_update=? WHERE id=?");
 
   if ($sql->execute(array($name_author, $title_author, $description_author, $date_update, $id))) {
-    header('Location: http://jornalpungoandongo.ao/dashboard/authors');
+    header('Location: https://jornalpungoandongo.ao/dashboard/authors');
   } else {
-    header('Location: http://jornalpungoandongo.ao/ops/nn');
+    header('Location: https://jornalpungoandongo.ao/ops/nn');
   };
 };
