@@ -7,6 +7,7 @@ if (isset($_POST['login_Adm'])) {
   if (!empty($_POST['adm_email']) && !empty($_POST['adm_password'])) {
 
     $adm_email = $_POST['adm_email'];
+    $adm_name = '';
 
     $adm_password = $_POST['adm_password'];
     $new_password = md5($adm_password);
@@ -17,8 +18,9 @@ if (isset($_POST['login_Adm'])) {
     $sql->execute(array($adm_email, $new_password));
 
     if ($sql->rowCount() < 1) {
+      unset($_SESSION['adm_name']);
       unset($_SESSION['adm_email']);
-      unset($_SESSION['adm_password']);
+      unset($_SESSION['isAdm']);
       echo "<script>
               alert('Dados do Administrador incorreto!');
               window.location.href='https://jornalpungoandongo.ao/dashboard';
@@ -27,7 +29,10 @@ if (isset($_POST['login_Adm'])) {
       $_SESSION['adm_name'] = $adm_name;
       $_SESSION['adm_email'] = $adm_email;
       $_SESSION['isAdm'] = $isAdm;
-      header('Location: https://jornalpungoandongo.ao/dashboard/news');
+      echo "<script>
+              alert('Preencha todos os dados!');
+              window.location.href='https://jornalpungoandongo.ao/dashboard/news';
+            </script>";
     }
   } else {
     echo "<script>

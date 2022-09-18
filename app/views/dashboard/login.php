@@ -2,7 +2,7 @@
 session_start();
 
 if ((isset($_SESSION['isAdm']) == "adm")) {
-  header('Location: http://jornalpungoandongo.ao/dashboard/news');
+  header('Location: https://jornalpungoandongo.ao/dashboard/news');
 }
 ?>
 

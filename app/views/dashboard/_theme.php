@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if ((isset($_SESSION['isAdm']) != "adm")) {
@@ -16,6 +17,7 @@ $adm_email = $_SESSION['adm_email'];
 $get_user = $pdo->prepare("SELECT * FROM user_adm WHERE adm_email=?");
 $get_user->execute(array($adm_email));
 
+// $adm_name = $get_user->rowCount();
 
 foreach ($get_user as $data) {
   $adm_name = $data['adm_name'];
@@ -74,7 +76,7 @@ foreach ($get_user as $data) {
     echo
     " <header class='page-header'>
         <nav>
-          <a href='http://jornalpungoandongo.ao/dashboard/global' aria-label='forecastr logo' class='logo'>
+          <a href='https://jornalpungoandongo.ao/dashboard/global' aria-label='forecastr logo' class='logo'>
             <h4>
               Painel
             </h4>
@@ -92,7 +94,7 @@ foreach ($get_user as $data) {
               <h3>Admin</h3>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/global'>
+              <a href='https://jornalpungoandongo.ao/dashboard/global'>
                 <svg>
                   <use xlink:href='#pages'></use>
                 </svg>
@@ -100,7 +102,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/users'>
+              <a href='https://jornalpungoandongo.ao/dashboard/users'>
                 <svg>
                   <use xlink:href='#users'></use>
                 </svg>
@@ -108,7 +110,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/news'>
+              <a href='https://jornalpungoandongo.ao/dashboard/news'>
                 <svg>
                   <use xlink:href='#news'></use>
                 </svg>
@@ -116,7 +118,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/categories'>
+              <a href='https://jornalpungoandongo.ao/dashboard/categories'>
                 <svg>
                   <use xlink:href='#categories'></use>
                 </svg>
@@ -124,7 +126,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/authors'>
+              <a href='https://jornalpungoandongo.ao/dashboard/authors'>
                 <svg>
                   <use xlink:href='#charts'></use>
                 </svg>
@@ -132,7 +134,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/publicity'>
+              <a href='https://jornalpungoandongo.ao/dashboard/publicity'>
                 <svg>
                   <use xlink:href='#appearance'></use>
                 </svg>
@@ -143,7 +145,7 @@ foreach ($get_user as $data) {
               <h3>Outros</h3>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/messages'>
+              <a href='https://jornalpungoandongo.ao/dashboard/messages'>
                 <svg>
                   <use xlink:href='#comments'></use>
                 </svg>
@@ -151,7 +153,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/newsLetters'>
+              <a href='https://jornalpungoandongo.ao/dashboard/newsLetters'>
                 <svg>
                   <use xlink:href='#charts'></use>
                 </svg>
@@ -159,7 +161,7 @@ foreach ($get_user as $data) {
               </a>
             </li>
             <li>
-              <a href='http://jornalpungoandongo.ao/dashboard/comments'>
+              <a href='https://jornalpungoandongo.ao/dashboard/comments'>
                 <svg>
                   <use xlink:href='#comments'></use>
                 </svg>
