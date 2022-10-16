@@ -1,12 +1,12 @@
 <?php
 
-$mode = 'producao';
+$mode = 'local';
 
 if ($mode == 'local') {
   $dbHost = "localhost";
   $dbUsername = "root";
   $dbPassword = "";
-  $dbName = "pungo_andongo";
+  $dbName = "jornangr_pungo_andongo";
 }
 if ($mode == 'producao') {
   $dbHost = "localhost";

@@ -4,19 +4,19 @@
 
 $status = 1;
 
-session_start();
-
 //conexao da base de dados//
 require 'src/db/config.php';
+session_start();
 
 $allNews = $pdo->prepare("SELECT * FROM news ");
 $allNews->execute();
 
 // Publicidades
-$publiciteis_1_3 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 0, 4 ");
-$publiciteis_1_3->execute();
-$publiciteis_4_6 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 4, 4 ");
-$publiciteis_4_6->execute();
+$publiciteis_3_6 = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 6 ");
+$publiciteis_3_6->execute(array('Pag. Inicial -> 1ª Pub fina'));
+
+$publiciteis_7_10 = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 6 ");
+$publiciteis_7_10->execute(array('Pag. Inicial -> 2ª Pub fina'));
 
 // Publicidades
 $publicity_news = $pdo->prepare("SELECT * FROM news where publicity_news='sim' ORDER BY id DESC limit 0, 3 ");
@@ -1491,7 +1491,7 @@ $rightNewsList3->execute();
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <?php foreach ($publiciteis_1_3 as $data) : ?>
+      <?php foreach ($publiciteis_3_6 as $data) : ?>
       <div class="swiper-slide">
         <section class="slide" id="slide">
           <section class="publicity">
@@ -1942,7 +1942,7 @@ $rightNewsList3->execute();
   <section class="publicitySwiper">
     <div class="swiper-wrapper">
       <!-- Slides -->
-      <?php foreach ($publiciteis_4_6 as $data) : ?>
+      <?php foreach ($publiciteis_7_10 as $data) : ?>
       <div class="swiper-slide">
         <section class="slide" id="slide">
           <section class="publicity">

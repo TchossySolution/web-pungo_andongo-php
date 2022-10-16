@@ -4,7 +4,7 @@
 require 'src/db/config.php';
 session_start();
 
-$id = '';
+$id;
 $user_id = '';
 $user_email = '';
 
@@ -21,10 +21,14 @@ endforeach;
 
 
 // Publicidades
-$publiciteis_1_3 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 0, 3 ");
-$publiciteis_1_3->execute();
-$publiciteis_4_6 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 3, 4 ");
-$publiciteis_4_6->execute();
+$publiciteis_1 = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 6 ");
+$publiciteis_1->execute(array('Pag. detalhes da noticia -> 1ª Pub fina'));
+
+$publiciteis_2 = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 6 ");
+$publiciteis_2->execute(array('Pag. detalhes da noticia -> 2ª Pub fina'));
+
+$publiciteis_square = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 6 ");
+$publiciteis_square->execute(array('Pag. detalhes da noticia -> Pub quadrada'));
 
 // Mais noticias sessão 1
 $rightNews1 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 0, 1 ");
@@ -39,6 +43,7 @@ endforeach;
 $title;
 $categoria;
 $image;
+$total_views = 0;
 
 $news1 = $pdo->prepare("SELECT * FROM news where id=$id ");
 $news1->execute();
@@ -47,6 +52,7 @@ foreach ($news1 as $data) :
   $category_id = $data['category_id'];
   $title = $data['title_news'];
   $image = $data['image_news'];
+  $total_views = $data['views_news'] + 1;
 
   $get_category = $pdo->prepare("SELECT * FROM categories where id=$category_id");
   $get_category->execute();
@@ -63,6 +69,8 @@ $news->execute();
 $allComments = $pdo->prepare("SELECT * FROM comments where news_id=? and is_approved='Aprovado' ORDER BY id DESC ");
 $allComments->execute(array($id));
 
+$see_views_news = $pdo->prepare("UPDATE news SET views_news=? WHERE id=?");
+$see_views_news->execute(array($total_views, $id))
 ?>
 
 <head>
@@ -192,6 +200,35 @@ $allComments->execute(array($id));
           </p>
         </div>
 
+        <section class="swiper mySwiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <section class="slide" id="slide">
+                <section class="publicity" style="width: 100%;">
+                  <div class="container">
+                    <div class='containerImage' style="width: 100%; height: 130px;">
+                      <img src=" <?= urlProject(FOLDER_BASE . BASE_IMG . "/COMENTARIOS.jpg") ?>" alt="">
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+            <?php foreach ($publiciteis_1 as $data_publiciteis) : ?>
+            <div class="swiper-slide">
+              <section class="slide" id="slide">
+                <section class="publicity" style="width: 100%;">
+                  <div class='containerImage' style="width: 100%; height: 130px;">
+                    <img width="100%" height="100%" src=" <?= $data_publiciteis['image_publicity'] ?>" alt="">
+                  </div>
+                </section>
+              </section>
+            </div>
+            <?php endforeach ?>
+          </div>
+        </section>
+
         <div class="epigraph">
           <i class="fa-solid fa-quote-left"></i>
 
@@ -203,6 +240,34 @@ $allComments->execute(array($id));
           </h4>
         </div>
 
+        <section class="swiper mySwiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <section class="slide" id="slide">
+                <section class="publicity" style="width: 100%;">
+                  <div class="container">
+                    <div class='containerImage' style="width: 100%; height: 130px;">
+                      <img src=" <?= urlProject(FOLDER_BASE . BASE_IMG . "/COMENTARIOS.jpg") ?>" alt="">
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+            <?php foreach ($publiciteis_2 as $data) : ?>
+            <div class="swiper-slide">
+              <section class="slide" id="slide">
+                <section class="publicity" style="width: 100%;">
+                  <div class='containerImage' style="width: 100%; height: 130px;">
+                    <img width="100%" height="100%" src=" <?= $data['image_publicity'] ?>" alt="">
+                  </div>
+                </section>
+              </section>
+            </div>
+            <?php endforeach ?>
+          </div>
+        </section>
 
         <div class="comments-container">
           <form class="row g-3 needs-validation" novalidate method="post"
@@ -288,23 +353,23 @@ $allComments->execute(array($id));
 
       <div class="rightContainer">
         <div class="otherNotices">
-
           <section class="mySwiper swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <?php foreach ($publiciteis_4_6 as $data) : ?>
+              <?php foreach ($publiciteis_square as $data) { ?>
               <div class="swiper-slide">
                 <section class="slide" id="slide">
-                  <section class="publicity">
+                  <section class="publicity" style="width: 100%; height: 100%;">
                     <div class='containerImage'>
                       <img src=" <?= $data['image_publicity'] ?>" alt="">
                     </div>
                   </section>
                 </section>
               </div>
-              <?php endforeach ?>
+              <?php } ?>
             </div>
+
           </section>
 
           <br>
@@ -344,7 +409,13 @@ $allComments->execute(array($id));
 
                   </div>
 
-                  <p><?= $data['resume_news'] ?></p>
+                  <div class="noticeInfo">
+                    <p>
+                      <?= $data['resume_news'] ?>
+                    </p>
+
+                  </div>
+
                 </div>
               </div>
             </a>
@@ -384,6 +455,9 @@ $allComments->execute(array($id));
                 </div>
               </div>
             </a>
+
+            <br>
+            <br>
             <?php endforeach ?>
 
           </div>

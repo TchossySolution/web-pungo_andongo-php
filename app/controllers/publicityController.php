@@ -109,9 +109,9 @@ if (isset($_POST['delete_publicity'])) {
   $sql = $pdo->prepare("DELETE FROM publicity WHERE id=?");
 
   if ($sql->execute(array($id))) {
-    header('Location: https://jornalpungoandongo.ao/authors');
+    header('Location: https://jornalpungoandongo.ao/publicity');
   } else {
-    header('Location: https://jornalpungoandongo.ao/authors');
+    header('Location: https://jornalpungoandongo.ao/publicity');
   };
 };
 

@@ -72,13 +72,13 @@
                </strong>
                <ul class="list">
                  <li>
-                   <p>Jurelma Samuel
+                   <p>Elmiro Bernardo
                    </p>
                  </li>
-                 <li>
+                 <!-- <li>
                    <p>Elsa Eduardo
                    </p>
-                 </li>
+                 </li> -->
                </ul>
                <br>
              </div>

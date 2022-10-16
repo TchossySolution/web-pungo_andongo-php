@@ -59,6 +59,16 @@ class Dash
     $page_name = "comments";
     echo $this->templates->render($page_name, $data);
   }
+  public function newspaper($data)
+  {
+    $page_name = "newspaper";
+    echo $this->templates->render($page_name, $data);
+  }
+  public function downloadPermissions($data)
+  {
+    $page_name = "downloadPermissions";
+    echo $this->templates->render($page_name, $data);
+  }
   public function login($data)
   {
     $page_name = "login";

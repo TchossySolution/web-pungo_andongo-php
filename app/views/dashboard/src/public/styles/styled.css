@@ -395,15 +395,17 @@ body {
     fill: var(--white);
   }
 }
-
+/* 
 @media screen and (max-width: 400px) {
   .page-content .grid > article {
     grid-column: 1 / -1;
   }
-}
+} 
+*/
 
 /* BODY CLASSES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* 
 .mob-menu-opened .toggle-mob-menu svg {
   transform: rotate(180deg);
 }
@@ -442,6 +444,7 @@ body {
     width: calc(100% - 40px);
   }
 }
+ */
 
 /* SWITCH STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

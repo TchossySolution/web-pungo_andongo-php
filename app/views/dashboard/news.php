@@ -5,7 +5,7 @@
 //conexao da base de dados//
 require 'src/db/config.php';
 
-$allNews = $pdo->prepare("SELECT * FROM news");
+$allNews = $pdo->prepare("SELECT * FROM news ");
 $allNews->execute();
 
 $allAuthor2 = $pdo->prepare("SELECT * FROM author");
@@ -33,6 +33,7 @@ $allCategories2->execute();
     <thead>
       <tr>
         <th>Id</th>
+        <th>Visualizações</th>
         <th>Titulo</th>
         <th>Resumo</th>
         <th>Autor</th>
@@ -50,10 +51,10 @@ $allCategories2->execute();
       $allCategories->execute();
 
       $author_id = $data['author_id'];
-      $author_name='';
+      $author_name = '';
 
       $category_id = $data['category_id'];
-      $category_name='';
+      $category_name = '';
 
       $get_category = $pdo->prepare("SELECT * FROM categories where id=$category_id");
       $get_category->execute();
@@ -66,6 +67,7 @@ $allCategories2->execute();
     <form method="post" enctype="multipart/form-data" action="<?= urlProject(CONTROLLERS . "/newsControllers.php") ?>">
       <tr>
         <td><?= $data['id']; ?></td>
+        <td><?= $data['views_news']; ?></td>
         <td><?= $data['title_news']; ?></td>
         <td><?= $data['resume_news']; ?></td>
         <td><?= $author_name; ?></td>

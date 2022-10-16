@@ -6,21 +6,19 @@
 require 'src/db/config.php';
 session_start();
 
+$actual_pag = $categoryData['page'];
+
+$pag = (!empty($actual_pag)) ? $actual_pag : 1;
+
+// Setar quantidade de items por pagina
+$qnt_result_page = 10;
+
+// Calcular inicio da visualização
+$start = ($qnt_result_page * $pag) - $qnt_result_page;
+
 $categoryName = $categoryData['category_name'];
 $categoryId = '0';
 
-
-// Publicidades
-$publiciteis_1_3 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 0, 3 ");
-$publiciteis_1_3->execute();
-$publiciteis_4_6 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 3, 4 ");
-$publiciteis_4_6->execute();
-
-// Mais noticias sessão 1
-$rightNews1 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 0, 1 ");
-$rightNews1->execute(array(rand(1, 13)));
-$rightNewsList1 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 1, 4 ");
-$rightNewsList1->execute(array(rand(1, 13)));
 
 $allCategory = $pdo->prepare("SELECT * FROM categories WHERE name_category = ?");
 $allCategory->execute(array($categoryName));
@@ -29,11 +27,21 @@ foreach ($allCategory as $category) :
   $categoryId = $category['id'];
 endforeach;
 
-$allNews = $pdo->prepare("SELECT * FROM news WHERE category_id = ?");
+$allNews = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC LIMIT $start, $qnt_result_page");
 $allNews->execute(array($categoryId));
 
-$publiciteis_12_15 = $pdo->prepare("SELECT * FROM publicity ORDER BY id DESC limit 12, 4 ");
-$publiciteis_12_15->execute();
+$publiciteis_1 = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 4 ");
+$publiciteis_1->execute(array('Pag. categorias -> 1ª Pub grossa'));
+
+// Publicidades
+$publiciteis_square = $pdo->prepare("SELECT * FROM publicity WHERE publicity_local = ? ORDER BY id DESC limit 0, 6 ");
+$publiciteis_square->execute(array('Pag. categorias -> Pub quadrada'));
+
+// Mais noticias sessão 1
+$rightNews1 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 0, 1 ");
+$rightNews1->execute(array(rand(1, 13)));
+$rightNewsList1 = $pdo->prepare("SELECT * FROM news WHERE category_id = ? ORDER BY id DESC limit 1, 4 ");
+$rightNewsList1->execute(array(rand(1, 13)));
 ?>
 
 <link rel="stylesheet" href="<?= urlProject(FOLDER_BASE . BASE_STYLES . "/categoryStyle.css") ?>">
@@ -45,7 +53,19 @@ $publiciteis_12_15->execute();
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <?php foreach ($publiciteis_12_15 as $data) : ?>
+        <div class="swiper-slide">
+          <section class="slide" id="slide">
+            <section class="publicity">
+              <div class="container">
+                <div class='containerImage'>
+                  <img src=" <?= urlProject(FOLDER_BASE . BASE_IMG . "/COMENTARIOS.jpg") ?>" alt="">
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <?php foreach ($publiciteis_1 as $data) : ?>
         <div class="swiper-slide">
           <section class="slide" id="slide">
             <section class="publicity">
@@ -59,15 +79,6 @@ $publiciteis_12_15->execute();
         </div>
         <?php endforeach ?>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination-publicitySwiper"></div>
-
-      <!-- If we need navigation buttons -->
-      <!-- <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div> -->
-
-      <!-- If we need scrollbar -->
-      <!--<div class="swiper-scrollbar"></div>-->
     </section>
 
     <div class="indicateContainer">
@@ -79,7 +90,7 @@ $publiciteis_12_15->execute();
       <span> » </span>
       <a href=""> <?= $categoryName ?> </a>
       <span> » </span>
-      <a href=""> página <span>1</span> </a>
+      <a href=""> página <span><?= $pag ?></span> </a>
     </div>
 
     <div class="searchForContainer">
@@ -142,7 +153,7 @@ $publiciteis_12_15->execute();
                 <div class="noticeInfo">
                   <p>Por <strong> <?= $author_name ?></strong> - <span><i class="fa-solid fa-calendar-days"></i>
                       <?= $data['date_create'] ?></span></p>
-
+                  <p><i class="fa-regular fa-comment-dots"></i> 3</p>
                 </div>
 
                 <div>
@@ -157,6 +168,57 @@ $publiciteis_12_15->execute();
 
           <?php endforeach ?>
 
+
+          <?php
+
+          // Numero de items
+          $result_pg = $pdo->prepare("SELECT COUNT(*) as num_result FROM news WHERE category_id = ?");
+
+          $result_pg->execute(array($categoryId));
+          $row_pag = $result_pg->fetchColumn();
+
+          // Quantidade paginas
+          $qnt_pag = ceil($row_pag / $qnt_result_page);
+
+          // Limitar links antes e depois
+          $max_link = 3;
+
+          // echo $qnt_pag;
+          ?>
+
+          <div style="padding-top: 2rem;">
+            <a href='<?= urlProject('news/search/category/' . $categoryName . "/1") ?>'
+              style="color: #000; padding: 8px 10px; border: solid 1px #ddd;  ">
+              Primeira </a>
+
+            <?php
+            for ($pag_after = $pag - $max_link; $pag_after <= $pag - 1; $pag_after++) {
+
+              if ($pag_after >= 1) {
+            ?>
+            <a href='<?= urlProject('news/search/category/' . $categoryName . '/' . $pag_after) ?>'
+              style='color: #000; padding: 8px 10px; border: solid 1px #ddd; '> <?= $pag_after ?> </a>
+            <?php }
+            } ?>
+
+            <a style="color: #fff; padding: 8px 10px; background-color: #ca1d1f; "> <?= $pag ?>
+            </a>
+
+            <?php
+            for ($pag_before = $pag + 1; $pag_before <= $pag + $max_link; $pag_before++) {
+
+              if ($pag_before <= $qnt_pag) {
+            ?>
+            <a href='<?= urlProject('news/search/category/' . $categoryName . '/' . $pag_before) ?>'
+              style='color: #000; padding: 8px 10px; border: solid 1px #ddd; '> <?= $pag_before ?> </a>
+            <?php }
+            } ?>
+
+            <a href='<?= urlProject('news/search/category/' . $categoryName . "/" . $qnt_pag) ?>'
+              style="color: #000; padding: 8px 10px; border: solid 1px #ddd;  "> Ultima </a>
+
+          </div>
+
         </div>
 
       </div>
@@ -167,7 +229,7 @@ $publiciteis_12_15->execute();
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <?php foreach ($publiciteis_4_6 as $data) : ?>
+              <?php foreach ($publiciteis_square as $data) : ?>
               <div class="swiper-slide">
                 <section class="slide" id="slide">
                   <section class="publicity">

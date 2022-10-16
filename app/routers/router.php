@@ -38,6 +38,8 @@ function router()
   $router->get("/messages", "Dash:messages");
   $router->get("/newsLetters", "Dash:newsLetters");
   $router->get("/comments", "Dash:comments");
+  $router->get("/newspaper", "Dash:newspaper");
+  $router->get("/downloadPermissions", "Dash:downloadPermissions");
 
   // ROTA DE ERROS
   $router->group("/ops");

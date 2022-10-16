@@ -1,6 +1,6 @@
 <?php
 
-define('URL_BASE', "https://jornalpungoandongo.ao");
+define('URL_BASE', "http://localhost/web-pungo-andongo-php");
 define('SITE', "Pungo Andongo");
 
 define('CONTROLLERS', 'app/controllers');
@@ -12,6 +12,7 @@ define('BASE_JS', "/src/js");
 define('BASE_IMG', "/src/assets/images");
 
 define('BASE_DETAILSNEWS', "news/detailsNews");
+define('BASE_NEWS', "news");
 
 define('FOLDER_DASHBOARD', "/app/views/dashboard");
 define('DASHBOARD_VIEWS', "/../views/dashboard");
