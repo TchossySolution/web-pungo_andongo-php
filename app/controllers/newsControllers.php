@@ -63,6 +63,7 @@ if (isset($_POST['create_news'])) {
   $choose_editors_news   = $_POST['choose_editors_news'];
   $emphasis_news   = $_POST['emphasis_news'];
   $relevant_news = $_POST['relevant_news'];
+  $views_news =  0;
   $date_create = $completeDate;
   $date_update =  $completeDate;
 
@@ -81,7 +82,6 @@ if (isset($_POST['create_news'])) {
             alert('A imagem excedeu o tamanho máximo de 2MB!');
             window.location.href='https://jornalpungoandongo.ao/dashboard/newspaper';
           </script>";
-
     exit();
   } else {
     if (in_array($extension, $accept)) {
@@ -116,7 +116,7 @@ if (isset($_POST['create_news'])) {
     }
   }
 
-  $sql = $pdo->prepare("INSERT INTO news values(null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+  $sql = $pdo->prepare("INSERT INTO news values(null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
   if ($sql->execute(array(
     $title_news,
@@ -134,6 +134,7 @@ if (isset($_POST['create_news'])) {
     $choose_editors_news,
     $emphasis_news,
     $relevant_news,
+    $views_news,
     $date_create,
     $date_update
   ))) {

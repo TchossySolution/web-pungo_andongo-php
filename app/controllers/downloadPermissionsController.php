@@ -31,8 +31,16 @@ if (isset($_POST['add_downloadPermissions'])) {
   // echo '<br>';
 
   if ($dateExpired > $dateNow) {
-    echo 'Ainda está no prazo';
+    echo 'Ainda está do prazo';
+    echo "<script>
+          alert('Ainda está do prazo!');
+          window.location.href='https://jornalpungoandongo.ao/dashboard/downloadPermissions';
+        </script>";
   } else {
-    echo 'Já passou está no prazo';
+    echo 'Já passou está do prazo';
+    echo "<script>
+      alert('Já passou está do prazo!');
+      window.location.href='https://jornalpungoandongo.ao/dashboard/downloadPermissions';
+    </script>";
   }
 };

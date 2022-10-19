@@ -42,18 +42,6 @@ $rightNewsList1->execute(array(rand(1, 13)));
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide">
-          <section class="slide" id="slide">
-            <section class="publicity">
-              <div class="container">
-                <div class='containerImage'>
-                  <img src=" <?= urlProject(FOLDER_BASE . BASE_IMG . "/COMENTARIOS2.jpg") ?>" alt="">
-                </div>
-              </div>
-            </section>
-          </section>
-        </div>
-
         <?php foreach ($publiciteis_1 as $data) : ?>
         <div class="swiper-slide">
           <section class="slide" id="slide">

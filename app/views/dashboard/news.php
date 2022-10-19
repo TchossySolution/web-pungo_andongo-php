@@ -5,7 +5,7 @@
 //conexao da base de dados//
 require 'src/db/config.php';
 
-$allNews = $pdo->prepare("SELECT * FROM news ");
+$allNews = $pdo->prepare("SELECT * FROM news");
 $allNews->execute();
 
 $allAuthor2 = $pdo->prepare("SELECT * FROM author");
@@ -51,10 +51,17 @@ $allCategories2->execute();
       $allCategories->execute();
 
       $author_id = $data['author_id'];
-      $author_name = '';
+      $author_name;
 
       $category_id = $data['category_id'];
-      $category_name = '';
+      $category_name;
+
+      $get_author = $pdo->prepare("SELECT * FROM author where id=$author_id");
+      $get_author->execute();
+
+      foreach ($get_author as $author) :
+        $author_name = $author['name_author'];
+      endforeach;
 
       $get_category = $pdo->prepare("SELECT * FROM categories where id=$category_id");
       $get_category->execute();
@@ -103,15 +110,13 @@ $allCategories2->execute();
                 placeholder="Digite o titulo da Noticia" require>
               <br>
 
-              <textarea type="text" class="form-control" name="resume_news" placeholder="Digite o resumo da Noticia"
-                require>
-                <?= $data['resume_news']; ?>
-              </textarea>
+              <input type="text" value="<?= $data['resume_news']; ?>" class="form-control" name="resume_news"
+                placeholder="Digite o resumo da Noticia" require>
               <br>
 
-
-              <input type="text" value="<?= $data['description_news']; ?>" class="form-control" name="description_news"
-                placeholder="Digite a descrição  da Noticia" require>
+              <textarea id="form-control trumbowyg-editor" type="text" placeholder="<?= $data['description_news']; ?>"
+                class="form-control" name="description_news" require><?= $data['description_news']; ?>
+              </textarea>
               <br>
 
               <input type="text" value="<?= $data['epigraph_news']; ?>" class="form-control" name="epigraph_news"
@@ -141,7 +146,7 @@ $allCategories2->execute();
 
               <label for="publicity_news">É uma publicidade? </label>
               <select class="form-select" name="publicity_news" id="publicity_news">
-                <option value="3">--- Escolha a opção ---</option>
+                <option value="">--- Escolha a opção ---</option>
                 <option value="sim" <?php if ($data['publicity_news'] == "sim") {
                                         echo 'selected';
                                       } ?>>Sim é</option>
@@ -153,7 +158,7 @@ $allCategories2->execute();
 
               <label for="choose_editors_news">Está noticia é uma escolha dos editores? </label>
               <select class="form-select" name="choose_editors_news" id="choose_editors_news">
-                <option value="3">--- Escolha a opção ---</option>
+                <option value="">--- Escolha a opção ---</option>
                 <option value="sim" <?php if ($data['choose_editors_news'] == "sim") {
                                         echo 'selected';
                                       } ?>>Sim é</option>
@@ -165,7 +170,7 @@ $allCategories2->execute();
 
               <label for="emphasis_news">Está noticia está em destaque? </label>
               <select class="form-select" name="emphasis_news" id="emphasis_news">
-                <option value="3">--- Escolha a opção ---</option>
+                <option value="">--- Escolha a opção ---</option>
                 <option value="sim" <?php if ($data['emphasis_news'] == "sim") {
                                         echo 'selected';
                                       } ?>>Sim é</option>
@@ -177,7 +182,7 @@ $allCategories2->execute();
 
               <label for="relevant_news">Está noticia é relevante? </label>
               <select class="form-select" name="relevant_news" id="relevant_news">
-                <option value="3">--- Escolha a opção ---</option>
+                <option value="">--- Escolha a opção ---</option>
                 <option value="sim" <?php if ($data['relevant_news'] == "sim") {
                                         echo 'selected';
                                       } ?>>Sim é</option>
@@ -272,8 +277,9 @@ $allCategories2->execute();
             </select>
             <br>
 
-            <input type="text" class="form-control" name="description_news" placeholder="Digite a descrição  da Noticia"
-              require>
+            <textarea id="trumbowyg-create" rows="5" type="text" class="form-control" name="description_news"
+              placeholder="Digite a descrição  da Noticia" require></textarea>
+            <br>
             <br>
 
             <input type="text" class="form-control" name="epigraph_news" placeholder="Digite epigrafe da Noticia"
@@ -345,3 +351,14 @@ $allCategories2->execute();
   </div>
 
 </section>
+
+
+<script>
+$('#trumbowyg-demo').trumbowyg({
+  btns: [
+    ['strong', 'em', ],
+    ['insertImage']
+  ],
+  autogrow: true
+});
+</script>
