@@ -27,7 +27,7 @@ $allNewsPaper->execute();
     <thead>
       <tr>
         <th>Id</th>
-        <th>Descrição</th>
+        <th>Title</th>
         <th>Data</th>
         <th>Ação</th>
       </tr>
@@ -39,7 +39,7 @@ $allNewsPaper->execute();
       action="<?= urlProject(CONTROLLERS . "/newsPaperController.php") ?>">
       <tr>
         <td><?= $data['id']; ?></td>
-        <td><?= $data['description_newsPaper']; ?></td>
+        <td><?= $data['name_newsPaper']; ?></td>
         <td style="min-width: 200px ;"><?= $data['date_create']; ?></td>
         <td style="min-width: 200px ;">
           <button type="button" class="btn btn-secondary" class="btn btn-primary" data-bs-toggle="modal"

@@ -17,6 +17,10 @@ function router()
   $router->get("/about", "Base:about");
   $router->get("/contacts", "Base:contacts");
 
+  // ROTA DE NEWSPAPER
+  $router->group("/newspaper");
+  $router->get("/{page}", "Base:newspaper");
+
   // ROTA DE NEWS
   $router->group("/news");
   $router->get("/{page}", "Base:news");

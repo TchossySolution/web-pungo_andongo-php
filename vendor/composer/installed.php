@@ -1,12 +1,12 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
-        'name' => 'hp/web-pungo_a_ndongo-php',
+        'reference' => 'dcffc2d83039afa35b2b5901f0c0373880b8904a',
+        'name' => 'hp/jornal-pungo-andongo',
         'dev' => true,
     ),
     'versions' => array(
@@ -19,13 +19,13 @@
             'reference' => 'a16770ae952ce3f91a04035a09be610a030e049c',
             'dev_requirement' => false,
         ),
-        'hp/web-pungo_a_ndongo-php' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+        'hp/jornal-pungo-andongo' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'dcffc2d83039afa35b2b5901f0c0373880b8904a',
             'dev_requirement' => false,
         ),
         'league/plates' => array(
@@ -35,6 +35,15 @@
             'install_path' => __DIR__ . '/../league/plates',
             'aliases' => array(),
             'reference' => '6d3ee31199b536a4e003b34a356ca20f6f75496a',
+            'dev_requirement' => false,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v6.6.5',
+            'version' => '6.6.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'reference' => '8b6386d7417526d1ea4da9edb70b8352f7543627',
             'dev_requirement' => false,
         ),
     ),

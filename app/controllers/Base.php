@@ -33,6 +33,13 @@ class Base
     $page_name = "detailsNews";
     echo $this->templates->render($page_name, ["newsId" => $newsId]);
   }
+
+  public function newspaper($newspaperPage): void
+  {
+    $page_name = "newspaper";
+    echo $this->templates->render($page_name, ["newspaperPage" => $newspaperPage]);
+  }
+
   public function search(): void
   {
     $page_name = "search";

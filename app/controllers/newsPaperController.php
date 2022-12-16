@@ -140,10 +140,10 @@ if (isset($_POST['create_newsPaper'])) {
   $sql = $pdo->prepare("INSERT INTO newspaper values(null,?,?,?,?,?,?)");
 
   if ($sql->execute(array(
+    $link_newsPaper,
+    $cover_newsPaper,
     $name_newsPaper,
     $description_newsPaper,
-    $cover_newsPaper,
-    $link_newsPaper,
     $date_newsPaper,
     $date_create
   ))) {

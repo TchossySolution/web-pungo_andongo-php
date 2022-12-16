@@ -2,6 +2,12 @@
 
 include_once('../db/config.php');
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require '../../vendor/autoload.php';
+
 if (isset($_POST['create_news'])) {
 
   // echo "Alguma coisa <br>";
@@ -76,7 +82,6 @@ if (isset($_POST['create_news'])) {
     exit();
   }
 
-
   if ($_FILES['image_news']['size'] >= $size_max) {
     echo "<script>
             alert('A imagem excedeu o tamanho máximo de 2MB!');
@@ -138,6 +143,62 @@ if (isset($_POST['create_news'])) {
     $date_create,
     $date_update
   ))) {
+
+
+    $allNewsletters = $pdo->prepare("SELECT * FROM newsletters");
+    $allNewsletters->execute();
+
+    foreach ($allNewsletters as $email) :
+      $mail = new PHPMailer(true);
+
+      try {
+        $user_email = $email['email'];
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $mail->CharSet = 'UTF-8';
+        $mail->isSMTP();
+        $mail->Host = 'smtp.mailtrap.io';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'da5a0a394c6662';
+        $mail->Password = 'b1280a17ed6ef0';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 2525;
+
+        //De:
+        $mail->setFrom('atendimento@pilartes.com.br', 'Jornal Pungo Andongo');
+        //Para:
+        $mail->addAddress("$user_email");
+
+        //Conteúdo:
+        $mail->isHTML(true);
+        $mail->Subject = "Jornal Pungo Andongo: $title_news";
+        $mail->Body = "Olá Ilustre!!<br/><br>
+                      Ultimas noticias:<br><br>
+                      $title_news <br><br>
+                      <img src='$image_news' width='100%' height='400'><br><br>
+                      $resume_news <br><br>
+                      Acesse <a href='https://jornalpungoandongo.ao/news/1'>Jornal Pungo Andongo</a><br><br>
+                      ";
+
+        $mail->AltBody = "Olá Ilustre!!<br/><br>
+                      Ultimas noticias:<br><br>
+                      $title_news <br><br>
+                      <img src='$image_news' width='100%' height='400'><br><br>
+                      $resume_news <br><br>
+                      Acesse <a href='https://jornalpungoandongo.ao/news/1'>Jornal Pungo Andongo</a><br><br>
+                      ";
+
+        $mail->send();
+
+        echo 'E-mail enviado com sucesso!<br>';
+
+        $user_email = '';
+      } catch (Exception $e) {
+        echo "Erro: E-mail não enviado com sucesso. Error PHPMailer: {$mail->ErrorInfo}";
+        //echo "Erro: E-mail não enviado com sucesso.<br>";
+      }
+    endforeach;
+
+
     echo "<script>
             window.location.href='https://jornalpungoandongo.ao/dashboard/news';
           </script>";
